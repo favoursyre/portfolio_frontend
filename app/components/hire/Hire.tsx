@@ -5,7 +5,8 @@
 import styles from "./hire.module.scss"
 import { useState, useEffect, MouseEvent, FormEvent } from "react"
 import { useRouter } from 'next/navigation';
-import { aclonica, notify, inter, getItem, hireModalKey, setItem, capitalizeFirstLetter } from '@/app/utils/utils';
+import { notify } from '@/app/utils/clientUtils';
+import { getItem, hireModalKey, setItem, capitalizeFirstLetter } from '@/app/utils/utils';
 import WhatsappIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -90,10 +91,10 @@ const Hire = () => {
 
   return (
     <>
-      <div className={`${styles.main} ${inter.className}`}>
+      <div className={`${styles.main}`}>
         <div className={styles.container}>
             <span className={styles.span1}>Have a Project in mind?</span>
-            <h3 className={aclonica.className}>Hire Me</h3>
+            <h3>Hire Me</h3>
             <div className={styles.span2}>
                 <span>By hiring me, you can expect a dedicated professional who is committed to delivering robust, reliable, and scalable software solutions. I am ready to collaborate with you to bring your ideas to life and drive your business forward.</span>
                 <span>Let's connect and discuss how I can contribute to your success.</span>
@@ -101,7 +102,7 @@ const Hire = () => {
             <button onClick={() => setHireModal(() => true)}><span>Contact Me</span></button>
         </div>
     </div>    
-    <div className={`${styles.contactModal} ${inter.className} ${!hireModal ? styles.inActiveContactModal : ""}`}>
+    <div className={`${styles.contactModal} ${!hireModal ? styles.inActiveContactModal : ""}`}>
         <ToastContainer />
         <div className={styles.container}>
           <div className={styles.image}>
@@ -191,7 +192,7 @@ const Hire = () => {
                     />
                 </div>
               </div>
-              <div className={`${styles.div_3} ${inter.className}`}>
+              <div className={`${styles.div_3}`}>
                 <textarea
                   placeholder="Job Description"
                   onChange={(e) => setDescription(() => e.target.value)}

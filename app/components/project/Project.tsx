@@ -4,7 +4,6 @@
 ///Libraries -->
 import styles from "./project.module.scss"
 import { useRouter } from 'next/navigation';
-import { aclonica, poppins, inter } from '@/app/utils/utils';
 import CodeIcon from '@mui/icons-material/Code';
 import GradingIcon from '@mui/icons-material/Grading';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
@@ -21,10 +20,10 @@ const Project = () => {
   //console.log('Current page:', routerPath);
 
   return (
-    <div className={`${styles.main} ${inter.className}`} id="project">
+    <div className={`${styles.main}`} id="project">
         <div className={styles.container}>
             <span className={styles.span1}>Some of the stuffs I've built</span>
-            <h3 className={aclonica.className}>My Projects</h3>
+            <h3>My Projects</h3>
             <div className={styles.category}>
                 <button><span>Web 2</span></button>
                 <button><span>Blockchain</span></button>

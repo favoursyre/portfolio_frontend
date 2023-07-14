@@ -1,7 +1,9 @@
 ///Layout page
 
 ///Libraries -->
-import Layout from './components/layout/Layout'
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import styles from "./layout.module.scss"
 import { backend } from './utils/utils';
 
 ///Commencing the code
@@ -42,8 +44,13 @@ export default async function RootLayout({
   const contacts = await getContacts()
 
   return (
-    <>
-      <Layout children={children} contact_={contacts} />
-    </>
+    <html lang="en" className={`${styles.html}`}>
+      <body>
+          <Header />
+          {/* <ToastContainer /> */}
+          <main className='container'>{children}</main>
+          <Footer contact_={contacts} />
+      </body>
+    </html>
   )
 }

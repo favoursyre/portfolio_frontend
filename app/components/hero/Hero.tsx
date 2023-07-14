@@ -4,7 +4,6 @@
 ///Libraries -->
 import styles from "./hero.module.scss"
 import { useRouter } from 'next/navigation';
-import { aclonica, poppins, inter } from '@/app/utils/utils';
 import CodeIcon from '@mui/icons-material/Code';
 import GradingIcon from '@mui/icons-material/Grading';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
@@ -22,7 +21,7 @@ const Hero = () => {
 
   return (
     <>
-        <div className={`${styles.main} ${inter.className}`}>
+        <div className={`${styles.main}`}>
             <div className={styles.image}>
                 <div className={styles.imageFrame}>
                     <img
@@ -33,13 +32,13 @@ const Hero = () => {
             </div>
             <div className={styles.brief}>
                 <span className={styles.brief1}>Software Engineer</span>
-                <span className={`${styles.brief2} ${aclonica.className}`}>
+                <span className={`${styles.brief2}`}>
                     Favour Ndubuisi
                 </span>
                 <span className={styles.brief3}>
                 With a keen eye for innovation, I specialize in developing dynamic web applications and leveraging the transformative potential of blockchain technology. From elegant front-end designs to robust back-end architectures, I bring ideas to life with meticulous attention to detail and a commitment to excellence.
                 </span>
-                <div className={`${styles.buttons} ${poppins.className}`}>
+                <div className={`${styles.buttons}`}>
                     <button className={styles.btn1}>
                         <span>Download CV</span>
                     </button>
@@ -51,7 +50,7 @@ const Hero = () => {
             <img id={styles.dot_1} src="./images/dots.png" alt=""></img>
             <img id={styles.dot_2} src="./images/dots1.png" alt=""></img>
         </div>
-        <div className={`${styles.stats} ${poppins.className}`}>
+        <div className={`${styles.stats}`}>
             <div className={styles.container}>
                 <div className={styles.experience}>
                     <div className={styles.icon}>

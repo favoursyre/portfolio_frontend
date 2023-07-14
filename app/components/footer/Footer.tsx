@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent } from 'react';
 import styles from "./footer.module.scss"
 import { usePathname, useRouter } from 'next/navigation';
-import { inter, poppins } from '@/app/utils/utils';
 import LocationIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
 import WhatsappIcon from "@mui/icons-material/WhatsApp";
@@ -28,7 +27,7 @@ const Footer = ({ contact_ }: { contact_: IContact }) => {
   //console.log('Current page:', routerPath);
 
   return (
-    <div className={`${styles.main} ${inter.className}`}>
+    <div className={`${styles.main}`}>
       <div className={styles.container}>
       <div className={styles.div1}>
         <div className={styles.logo} onClick={() => router.push('/')}>

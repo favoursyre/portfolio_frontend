@@ -97,3 +97,24 @@ $breakpoints: (
     font-weight: $weight;
     color: $color;
 }
+
+///Declaring the necessary font families
+@font-face {
+  font-family: "Roboto";
+  src: url("../public/fonts/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Aclonica";
+  src: url("../public/fonts/Aclonica-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins-Regular.ttf") format('truetype');
+}

@@ -5,7 +5,6 @@
 import { useState, MouseEvent } from "react"
 import styles from "./experience.module.scss"
 import { useRouter } from 'next/navigation';
-import { aclonica, inter } from '@/app/utils/utils';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -30,9 +29,9 @@ const Experience = () => {
   }
 
   return (
-    <div className={`${styles.main} ${inter.className}`} id="experience">
+    <div className={`${styles.main}`} id="experience">
         <span className={styles.titleHead}>My Journey So Far</span>
-        <h3 className={aclonica.className}>My Experiences</h3>
+        <h3>My Experiences</h3>
         <div className={styles.container}>
           <div className={styles.education}>
               <div className={styles.header}>

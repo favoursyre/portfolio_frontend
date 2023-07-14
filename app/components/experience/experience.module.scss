@@ -10,6 +10,7 @@
     top: 265%;
     @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 0%);
     left: 0%;
+    font-family: "Inter";
 
     @include tabletPro {
         top: 130%;
@@ -74,6 +75,7 @@
         @include size(100%, 10%);
         margin-top: 10px;
         margin-bottom: 5px;
+        font-family: "Aclonica";
 
         @include tablet {
             font-size: 30px;
@@ -150,6 +152,7 @@
                     @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
                     @include size(60%, 100%);
                     margin-top: 0px;
+                    font-family: "Aclonica";
                     margin-bottom: 0px;
                     @include text-layout($size: 16px, $l_height: 30px, $color: $primary-color, $weight: 500);
 
@@ -369,6 +372,7 @@
                 }
 
                 h5 {
+                    font-family: "Aclonica";
                     //border: 1px solid red;
                     @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
                     @include size(60%, 100%);

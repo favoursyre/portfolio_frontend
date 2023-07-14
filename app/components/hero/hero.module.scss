@@ -10,6 +10,7 @@
     top: 11%;
     left: 0px;
     padding: 1% 1%;
+    font-family: "Inter";
     @include size(98%, 70%);
 
     @include tabletPro {
@@ -135,6 +136,7 @@
             position: relative;
             border: 1px solid red;
             @include text-layout($size: 35px, $l_height: 45px, $color: $primary-color, $weight: 600);
+            font-family: "Aclonica";
 
             @include tablet {
                 margin-top: 0px;
@@ -190,6 +192,7 @@
             border: 1px solid red;
             @include size(50%, 13%);
             top: 9%;
+            font-family: "Poppins";
 
             @include tablet {
                 @include size(60%, 10%);
@@ -322,6 +325,7 @@
     border: 1px solid black;
     @include flexBar($align: center, $justify: center, $gap: 3%);
     top: 85%;
+    font-family: "Poppins";
     left: 0px;
     @include size(100%, 12%);
 

@@ -4,7 +4,8 @@
 ///Libraries -->
 import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent, useContext, createContext } from 'react';
-import { poppins, inter, capitalizeFirstLetter, notify, getItem, hireModalKey, setItem, sleep } from '@/app/utils/utils';
+import { notify } from '@/app/utils/clientUtils';
+import { capitalizeFirstLetter, getItem, hireModalKey, sleep } from '@/app/utils/utils';
 import { IHireModalContext } from '@/app/utils/interfaces';
 import HireModal from '../modal/hire/Hire';
 import styles from "./header.module.scss"
@@ -154,7 +155,7 @@ const Header = () => {
                 <span>avoursyre</span>
             </div>
 
-            <div className={`${styles.category} ${poppins.className}`} >
+            <div className={`${styles.category}`} >
                 <button onClick={() => router.push('/#about')}><span>About Me</span></button>
                 <button onClick={() => {
                   //setHireModal(() => true)
@@ -168,7 +169,7 @@ const Header = () => {
             </div>
         </header>
         {/* <HireModal value_={hireModal} /> */}
-        <div className={`${styles.contactModal} ${inter.className} ${!hireModal ? styles.inActiveContactModal : ""}`}>
+        <div className={`${styles.contactModal} ${!hireModal ? styles.inActiveContactModal : ""}`}>
         <ToastContainer />
         <div className={styles.container}>
           <div className={styles.image}>
@@ -293,7 +294,7 @@ const Header = () => {
             <button onClick={(e) => menuButton(e, !menu)}><MenuIcon className={styles.icon} /></button>
         </header>
         <div className={menuModal ? styles.activeMenuModal : styles.inActiveMenuModal}>
-        <div className={`${menuBar ? styles.activeMenu : styles.inActiveMenu} ${poppins.className}`}>
+        <div className={`${menuBar ? styles.activeMenu : styles.inActiveMenu}`}>
           <button onClick={(e) => menuBarNav(e, "/#about")}><span>About Me</span></button>
           <button onClick={(e) => menuBarNav(e, "hireModal")}><span>Hire Me</span></button>
           <button onClick={(e) => menuBarNav(e, '/#experience')}><span>Expertise</span></button>

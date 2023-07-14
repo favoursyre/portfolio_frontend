@@ -10,6 +10,7 @@
     top: 165%;
     @include flexBar($align: center, $justify: center, $gap: 3%);
     left: 0%;
+    font-family: "Inter";
 
     @include tabletPro {
         top: 90%;
@@ -67,6 +68,7 @@
             @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
             @include size(100%, 12%);
             margin-top: 0px;
+            font-family: "Aclonica";
             margin-bottom: 20px;
 
             @include tablet {

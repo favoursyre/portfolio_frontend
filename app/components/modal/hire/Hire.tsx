@@ -4,7 +4,8 @@
 ///Libraries -->
 import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent, useContext, createContext } from 'react';
-import { poppins, inter, capitalizeFirstLetter, notify, getItem, hireModalKey, setItem } from '@/app/utils/utils';
+import { capitalizeFirstLetter, getItem, hireModalKey, setItem } from '@/app/utils/utils';
+import { notify } from '@/app/utils/clientUtils';
 import { IHireModalContext } from '@/app/utils/interfaces';
 import styles from "./hire.module.scss"
 import MenuIcon from "@mui/icons-material/Menu";
@@ -120,7 +121,7 @@ const HireModal = ({ value_ }: { value_: boolean }) => {
   }, [hireModal]);
 
   return (
-    <div className={`${styles.contactModal} ${inter.className} ${!hireModal ? styles.inActiveContactModal : ""}`}>
+    <div className={`${styles.contactModal} ${!hireModal ? styles.inActiveContactModal : ""}`}>
         <ToastContainer />
         <div className={styles.container}>
           <div className={styles.image}>
@@ -213,7 +214,7 @@ const HireModal = ({ value_ }: { value_: boolean }) => {
                     />
                 </div>
               </div>
-              <div className={`${styles.div_3} ${inter.className}`}>
+              <div className={`${styles.div_3}`}>
                 <textarea
                   placeholder="Job Description"
                   onChange={(e) => setDescription(() => e.target.value)}

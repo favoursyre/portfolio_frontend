@@ -10,6 +10,7 @@
     top: 95%;
     @include flexBar($align: center, $justify: center, $gap: 3%);
     left: 0%;
+    font-family: "Inter";
 
     @include tabletPro {
         top: 50%;
@@ -90,6 +91,7 @@
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
             @include size(100%, 15%);
             margin-top: 10px;
+            font-family: "Aclonica";
             margin-bottom: 20px;
 
             @include tablet {
@@ -160,6 +162,7 @@
                 @include size(100%, 20%);
                 margin-top: 0px;
                 margin-bottom: 0px;
+                font-family: "Aclonica";
                 @include text-layout($size: 16px, $l_height: 30px, $color: $primary-color, $weight: 500);
 
                 @include phonePro {
@@ -251,6 +254,7 @@
                 @include size(100%, 30%);
                 margin-top: 0px;
                 margin-bottom: 0px;
+                font-family: "Aclonica";
                 @include text-layout($size: 16px, $l_height: 30px, $color: $primary-color, $weight: 500);
 
                 @include phonePro {
@@ -406,6 +410,7 @@
                 @include size(100%, 25%);
                 margin-top: 0px;
                 margin-bottom: 0px;
+                font-family: "Aclonica";
                 @include text-layout($size: 16px, $l_height: 30px, $color: $primary-color, $weight: 500);
 
                 @include phonePro {

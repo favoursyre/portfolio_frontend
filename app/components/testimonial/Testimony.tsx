@@ -5,7 +5,7 @@
 import styles from "./testimony.module.scss"
 import { useState } from "react"
 import { useRouter } from 'next/navigation';
-import { aclonica, poppins, inter, getItem, hireModalKey, setItem } from '@/app/utils/utils';
+import { getItem, hireModalKey, setItem } from '@/app/utils/utils';
 
 ///Commencing the code 
 
@@ -21,9 +21,9 @@ const Testimony = () => {
   //console.log('Current page:', routerPath);
 
   return (
-    <div className={`${styles.main} ${inter.className}`} id="testimony">
+    <div className={`${styles.main}`} id="testimony">
         <span className={styles.span1}>What some of my clients have said</span>
-        <h3 className={aclonica.className}>Testimonials</h3>
+        <h3>Testimonials</h3>
         <div className={styles.testimony}>
             <div className={styles.image}>
                 <img />

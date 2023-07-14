@@ -8,6 +8,7 @@
     //border: 1px solid black;
     @include size(100%, 10%);
     top: 600%;
+    font-family: "Inter";
     //border-top: 1px solid $primary-color;
     @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 5%);
     left: 0%;

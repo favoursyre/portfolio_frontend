@@ -7,6 +7,7 @@
 //Commencing the code -->
 .contactModal {
     //border: 1px solid blue;
+    font-family: "Inter";
     @include size ($width: 100%, $height: 410%);
     @include flexBar ($align: flex-start, $justify: center, $gap: 1%, $flex_d: row, $flex: none);
     background-color: rgba(0, 0, 0, 0.4);
@@ -254,6 +255,7 @@
                 .div_3 {
                     height: 43%;
                     //border: 1px solid black;
+                    font-family: "Inter";
 
                     textarea {
                         //border: 1px solid red;

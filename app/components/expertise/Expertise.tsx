@@ -4,7 +4,6 @@
 ///Libraries -->
 import styles from "./expertise.module.scss"
 import { useRouter } from 'next/navigation';
-import { aclonica, inter } from '@/app/utils/utils';
 
 ///Commencing the code 
 
@@ -17,10 +16,10 @@ const Expertise = () => {
   //console.log('Current page:', routerPath);
 
   return (
-    <div className={`${styles.main} ${inter.className}`} id="expertise">
+    <div className={`${styles.main}`} id="expertise">
         <div className={styles.container}>
             <span className={styles.span1}>Technologies I'm familiar with</span>
-            <h3 className={aclonica.className}>My Expertise Area</h3>
+            <h3>My Expertise Area</h3>
             <div className={styles.skills}>
                 <div className={styles.carousel}>
                     <div className={styles.illustrate}>

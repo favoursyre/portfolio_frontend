@@ -6,8 +6,6 @@ import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent } from 'react';
 import styles from "./about.module.scss"
 import { usePathname, useRouter } from 'next/navigation';
-import { aclonica, poppins, inter } from '@/app/utils/utils';
-import Hero from '../hero/Hero';
 import PersonIcon from '@mui/icons-material/Person';
 import MaleIcon from '@mui/icons-material/Male';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -34,10 +32,10 @@ const About = () => {
   //console.log('Testimony: ', htmlString)
 
   return (
-    <div className={`${styles.main} ${inter.className}`} id="about">
+    <div className={`${styles.main}`} id="about">
         <div className={styles.left}>
             <div className={styles.span1}>A brief introduction</div>
-            <h3 className={aclonica.className}>About Me</h3>
+            <h3>About Me</h3>
            <span className={styles.span2}>I'm a Software Engineer with 7+ years’ worth of experience facilitating cutting-edge engineering solutions and creating
             value with a wide range of technological skills. I have proficient knowledge in Web Engineering, Blockchain Engineering
             and Cyber Security. I enjoy building software and solving real world problems. I’m certain I can be relied upon to help
@@ -45,7 +43,7 @@ const About = () => {
         </div>
         <div className={styles.right}>
             <div className={styles.bio}>
-                <h5 className={aclonica.className}>Biodata</h5>
+                <h5>Biodata</h5>
                 <div className={styles.biodatas}>
                     <div className={styles.name}>
                         <div className={styles.label}>
@@ -78,7 +76,7 @@ const About = () => {
                 </div>
             </div>
             <div className={styles.hobby}>
-                <h5 className={aclonica.className}>Hobbies</h5>
+                <h5>Hobbies</h5>
                 <div className={styles.hobbies}>
                     <div className={styles.code}>
                         <CodeIcon className={styles.icon} />
@@ -107,7 +105,7 @@ const About = () => {
                 </div>
             </div>
             <div className={styles.language}>
-                <h5 className={aclonica.className}>Languages</h5>
+                <h5>Languages</h5>
                 <div className={styles.languages}>
                     <div className={styles.igbo}>
                         <div className={styles.circle_border}>
