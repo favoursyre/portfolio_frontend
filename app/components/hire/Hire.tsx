@@ -6,7 +6,8 @@ import styles from "./hire.module.scss"
 import { useState, useEffect, MouseEvent, FormEvent } from "react"
 import { useRouter } from 'next/navigation';
 import { notify } from '@/app/utils/clientUtils';
-import { getItem, hireModalKey, setItem, capitalizeFirstLetter } from '@/app/utils/utils';
+import { backend, hireModalKey, capitalizeFirstLetter } from '@/app/utils/utils';
+import { IHire } from "@/app/utils/interfaces";
 import WhatsappIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -32,7 +33,7 @@ const Hire = () => {
     const [emailAddress, setEmailAddress] = useState<string | undefined>("")
     const [budget, setBudget] = useState<number | undefined>()
     const [description, setDescription] = useState<string | undefined>("")
-    const hireModalStat = getItem(hireModalKey)
+    //const hireModalStat = getItem(hireModalKey)
     //const { hireModal, setHireModal } = useContext(false)
     const [hireModal, setHireModal] = useState<boolean>(false)
   //console.log('Current page:', routerPath);
@@ -60,33 +61,33 @@ const Hire = () => {
     }
 
     //Send the order to the backend
-    // try {
-    //   //console.log('Clicked')
-    //   const inquiry: IInquiry = {firstName, lastName, emailAddress, message}
-    //   console.log("Order: ", inquiry)
-    //   const res = await fetch(`${backend}/inquiry/add/`, {
-    //       method: 'POST',
-    //       body: JSON.stringify(inquiry),
-    //       headers: {
-    //       'Content-Type': 'application/json',
-    //       },
-    //   });
+    try {
+      //console.log('Clicked')
+      const hire: IHire = {clientName, companyName, emailAddress, budget, description}
+      console.log("Order: ", hire)
+      const res = await fetch(`${backend}/hire/add/`, {
+          method: 'POST',
+          body: JSON.stringify(hire),
+          headers: {
+          'Content-Type': 'application/json',
+          },
+      });
       
-    // const data = await res.json();
-    // console.log("Data: ", data);
+    const data = await res.json();
+    console.log("Data: ", data);
 
-    // if (res.ok) {
-    //   notify("success", `Your message was sent successfully`)
-    //   setContactModal(() => false)
-    //   window.location.reload()
-    // } else {
-    //   throw Error(`${data}`)
-    // }
+    if (res.ok) {
+      notify("success", `Your message was sent successfully`)
+      setHireModal(() => false)
+      window.location.reload()
+    } else {
+      throw Error(`${data}`)
+    }
     
-    // } catch (error) {
-    //     console.log("error: ", error)
-    //     notify("error", `${error}`)
-    // }
+    } catch (error) {
+        console.log("error: ", error)
+        notify("error", `${error}`)
+    }
   }
 
   return (
@@ -97,7 +98,7 @@ const Hire = () => {
             <h3>Hire Me</h3>
             <div className={styles.span2}>
                 <span>By hiring me, you can expect a dedicated professional who is committed to delivering robust, reliable, and scalable software solutions. I am ready to collaborate with you to bring your ideas to life and drive your business forward.</span>
-                <span>Let's connect and discuss how I can contribute to your success.</span>
+                <span>Let&apos;s connect and discuss how I can contribute to your success.</span>
             </div>
             <button onClick={() => setHireModal(() => true)}><span>Contact Me</span></button>
         </div>
@@ -121,7 +122,7 @@ const Hire = () => {
                         <div className={styles.icon}>
                             <CallIcon style={{ fontSize: "1.15rem" }} />
                         </div>
-                        <span><strong>Let's Talk</strong></span>
+                        <span><strong>Let&apos;s Talk</strong></span>
                     </div>
                     <div className={styles.brief}>+234-9090982848</div>
                 </div>
@@ -150,7 +151,7 @@ const Hire = () => {
               </button>
             </header>
             <div className={styles.brief}>
-            <span id={styles.brief_2}>I'd love to help</span>
+            <span id={styles.brief_2}>I&apos;d love to help</span>
               <span id={styles.brief_1}>
                 <strong>What project do you have in mind? </strong>
               </span>

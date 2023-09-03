@@ -32,10 +32,9 @@ const Footer = ({ contact_ }: { contact_: IContact }) => {
       <div className={styles.div1}>
         <div className={styles.logo} onClick={() => router.push('/')}>
                 <img
-                    src="./images/f.png"
+                    src="https://drive.google.com/uc?export=download&id=18qlFm8b1zWrY202Ogd7K3gSOHbmnEX6K"
                     alt="logo"
                 />
-                <span>avoursyre</span>
             </div>
 
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><ArrowCircleUpIcon /></button>

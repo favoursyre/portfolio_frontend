@@ -5,7 +5,7 @@
 
 //Commencing the code -->
 .main {
-    border: 1px solid red;
+    //border: 1px solid red;
     @include size(100%, 50%);
     top: 465%;
     font-family: "Inter";
@@ -30,6 +30,7 @@
     @include phonePro {
         top: 390%;
         height: 35%;
+        //padding: 2% 0%;
     }
 
     @include phone {
@@ -43,16 +44,21 @@
     }
 
     .container {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
         @include size(90%, 100%);
         background-color: $primary-color;
 
+        @include phonePro {
+            padding: 2% 0%;
+            height: 95%;
+        }
+
         .span1 {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include text-layout($size: 13px, $l_height: 20px, $color: $tertiary-color);
             @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
-            @include size(100%, 10%);
+            @include size(100%, 5%);
 
             @include phonePro {
                 font-size: 12px;
@@ -61,13 +67,13 @@
         }
 
         h3 {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include text-layout($size: 40px, $l_height: 45px, $color: $text-color-2, $weight: 600);
             @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
             @include size(100%, 15%);
-            margin-top: 10px;
+            margin-top: 5px;
             font-family: "Aclonica";
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             @include tablet {
                 margin-top: 0px;
@@ -88,7 +94,7 @@
         }
 
         .span2 {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
             @include size(70%, 40%);
             @include text-layout($size: 14px, $l_height: 23px, $color: $text-color-2);
@@ -121,6 +127,7 @@
 
             @include phonePro {
                 @include size(40%, 13%);
+                margin: 10px;
             }
 
             @include phoneMini {
@@ -137,7 +144,7 @@
 
 .contactModal {
     //border: 1px solid blue;
-    @include size ($width: 100%, $height: 410%);
+    @include size ($width: 100%, $height: 610%);
     @include flexBar ($align: flex-start, $justify: center, $gap: 1%, $flex_d: row, $flex: none);
     background-color: rgba(0, 0, 0, 0.4);
     left: 0%;
@@ -173,7 +180,7 @@
     .container {
         //border: 1px solid red;
         @include flexBar ($position: sticky, $align: center, $justify: flex-start, $gap: 0%, $flex_d: row);
-        @include size(60%, 18%);
+        @include size(60%, 12%);
         top: 15%;
         z-index: 200;
         border-radius: 10px;
@@ -208,7 +215,7 @@
             @include size(30%, 100%);
             border-radius: 10px 0px 0px 10px;
             overflow: hidden;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../public/images/contact1.jpg');
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://drive.google.com/uc?export=download&id=1wPg8X3MF-Kymuu5g5pNe6FRcMZp9ie61');
             background-size: cover;
             background-position: right;
             background-repeat: no-repeat;
@@ -244,7 +251,7 @@
                 } 
 
                 .officeAddress, .phoneNumber, .emailAddress {
-                    border: 1px solid black;
+                    //border: 1px solid black;
                     @include flexBar ($position: relative, $align: center, $justify: center, $gap: 2%, $flex_d: column);
                     @include size(100%, 25%);
 
@@ -278,14 +285,12 @@
                     }
 
                     .brief {
-                        border: 1px solid red;
+                        //border: 1px solid red;
                         @include flexBar ($position: relative, $align: flex-start, $justify: flex-start, $gap: 1%, $flex_d: row);
                         @include size(80%, 50%);
                         font-size: 12px;
                         line-height: 18px;
                         //text-align: start;
-
-                        
 
                         @include tablet {
                             //border: 1px solid red;
@@ -328,13 +333,14 @@
             }
 
             .imgSocials {
-                border: 1px solid black;
+                //border: 1px solid black;
                 @include flexBar ($position: relative, $align: center, $justify: center, $gap: 2%);
                 @include size(90%, 7%);
                 top: -1%;
                 
                 @include phonePro {
-                    border: 1px solid red;
+                    //border: 1px solid red;
+                    border: none;
                     justify-content: flex-start;
                     height: 10%;
                     top: -5%;

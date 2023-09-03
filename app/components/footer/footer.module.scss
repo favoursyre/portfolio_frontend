@@ -61,14 +61,19 @@
             .logo {
                 //border: 1px solid red;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
-                @include size(10%, 100%);
+                @include size(5%, 100%);
                 left: 5%;
+                //top: 2%;
         
                 img {
                     //border: 1px solid black;
                     position: relative;
-                    object-fit: cover;
-                    @include size(30%, 100%);
+                    object-fit: contain;
+                    @include size(100%, 100%);
+
+                    @include phonePro {
+                        height: 200%;
+                    }
                 }
         
                 span {

@@ -5,7 +5,7 @@
 
 //Commencing the code -->
 .main {
-    border: 1px solid green;
+    //border: 1px solid green;
     @include size(100%, 70%);
     top: 95%;
     @include flexBar($align: center, $justify: center, $gap: 3%);
@@ -43,11 +43,11 @@
     }
 
     .left {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include flexBar($position: relative, $align: flex-end, $justify: center, $flex_d: column, $gap: 0%);
-        @include size(30%, 70%);
+        @include size(30%, 80%);
 
-        @include tablet {
+        @include tabletPro {
             width: 40%;
         }
 
@@ -65,12 +65,16 @@
         }
 
         .span1 {
-            border: 1px solid red;
+            //border: 1px solid red;
             @include text-layout($size: 13px, $l_height: 20px, $color: $text-color-4);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
-            @include size(100%, 10%);
+            @include size(100%, 5%);
             left: 4%;
             //margin-bottom: -35px;
+
+            @include tabletPro {
+                //height: 5%;
+            }
 
             @include phonePro {
                 width: 100%;
@@ -81,7 +85,7 @@
             }
 
             @include phoneMini {
-                height: 5%;
+                //height: 5%;
             }
         }
 
@@ -89,10 +93,9 @@
             //border: 1px solid red;
             @include text-layout($size: 40px, $l_height: 45px, $color: $primary-color, $weight: 600);
             @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
-            @include size(100%, 15%);
-            margin-top: 10px;
+            @include size(100%, 13%);
+            margin-top: 5px;
             font-family: "Aclonica";
-            margin-bottom: 20px;
 
             @include tablet {
                 margin-top: 0px;
@@ -108,7 +111,7 @@
                 justify-content: center;
                 margin-top: 0px;
                 font-size: 25px;
-                width: 100%;
+                height: 10%;
                 text-align: center;
             }
 
@@ -121,12 +124,32 @@
             //border: 1px solid red;
             @include text-layout($size: 14px, $l_height: 23px, $color: $text-color-2);
             @include flexBar($position: relative, $align: flex-end, $justify: center, $flex_d: column, $gap: 0%);
-            @include size(100%, 55%);
+            @include size(100%, 60%);
             //text-align: end;
 
-            @include phoneMini {
+            @include tablet {
+                line-height: 20px;
+            }
+
+            @include tabletMini {
+                font-size: 12px;
+                line-height: 17px;
+            }
+
+            @include phonePro {
                 font-size: 12px;
                 line-height: 20px;
+                height: 65%;
+                text-align: center;
+            }
+
+            @include phone {
+                line-height: 16px;
+            }
+
+            @include phoneMini {
+                font-size: 10px;
+                line-height: 15px;
                 position: relative;
                 top: 5%;
             }
@@ -134,7 +157,7 @@
     }
 
     .right {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 1%);
         @include size(40%, 80%);
 
@@ -186,7 +209,7 @@
                     @include text-layout($size: 12px, $l_height: 30px, $color: $text-color-2, $weight: 600);
 
                     .label {
-                        border: 1px solid red;
+                       //border: 1px solid red;
                         @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 5%);
                         @include size(20%, 100%);
 
@@ -290,7 +313,7 @@
                 }
 
                 .code, .music, .travel, .reading, .sleep, .food {
-                    border: 1px solid black;
+                    //border: 1px solid black;
                     @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 5%);
                     @include size(15%, 100%);
 
@@ -423,7 +446,7 @@
             }
 
             .languages {
-                border: 1px solid red;
+                //border: 1px solid red;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
                 @include size(100%, 70%);
                 @include text-layout($size: 12px, $l_height: 30px, $color: $text-color-2, $weight: 600);
@@ -437,7 +460,7 @@
                 }
 
                 .igbo, .english, .chinese {
-                    border: 1px solid red;
+                    //border: 1px solid red;
                     @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 0%);
                     @include size(15%, 90%);
 
@@ -499,12 +522,13 @@
 
                 .chinese {
                     .circle {
+                       // display: none;
                         top: 0.5%;
                         left: 7.7%;
                       }
 
                     .circle_border {
-                        background: linear-gradient(270deg, $primary-color 16%, transparent 10%), linear-gradient(0deg, $primary-color 20%, $text-color-3 10%)
+                        background: linear-gradient(280deg, $primary-color 16%, transparent 10%), linear-gradient(-70deg, $primary-color 10%, $text-color-3 10%)
                       }
                 }
 

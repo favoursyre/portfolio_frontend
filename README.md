@@ -6,7 +6,7 @@
 3. [Technologies](#technologies)
 
 ## Overview
-This is the frontend for my portfolio website. Note: Application is not yet ready
+This is the frontend for my portfolio website.
 
 ## Languages
 * HTML
@@ -15,4 +15,4 @@ This is the frontend for my portfolio website. Note: Application is not yet read
 
 ## Technologies
 * SCSS
-* Next.JS
+* Next TS

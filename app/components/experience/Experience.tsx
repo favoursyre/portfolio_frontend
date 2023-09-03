@@ -36,7 +36,7 @@ const Experience = () => {
           <div className={styles.education}>
               <div className={styles.header}>
                 <SchoolIcon className={styles.icon} />
-                <h5 className={aclonica.className}>Education</h5>
+                <h5>Education</h5>
               </div>
               <div className={styles.body}>
                 <div className={styles.unn}>
@@ -92,16 +92,16 @@ const Experience = () => {
           <div className={styles.work}>
             <div className={styles.header}>
               <WorkIcon className={styles.icon} />
-              <h5 className={aclonica.className}>Profession</h5>
+              <h5>Profession</h5>
             </div>
           <div className={styles.body}>
             <div className={styles.nupat} onClick={(e) => viewWork(e, 0)}>
               <div className={styles.circle}><AddIcon className={activeIndex !== 0 ? styles.icon : styles.inActiveIcon}/></div>
               <div className={styles.brief}>
-                <span className={styles.span1}>Nupat Technologies</span>
-                <span className={styles.span2}>Full Stack Blockchain Engineer</span>
+                <span className={styles.span1}>MetaMask</span>
+                <span className={styles.span2}>Full-Stack Blockchain Engineer</span>
                 <div className={styles.span3}>
-                <span className={styles.country}>Nigeria (Remote)</span>
+                <span className={styles.country}>USA (Remote)</span>
                 <div className={styles.date}>
                   <CalendarMonthIcon className={styles.calendar} />
                   <span>August 2022 - Current</span>
@@ -110,11 +110,11 @@ const Experience = () => {
               </div>
               <div className={`${styles.details} ${activeIndex !== 0 ? styles.inActiveDetails : ""}`}>
                 <ul>
-                  <li>Researched ERC standards, designed, developed and tested blockchain technologies in line with product requirements.</li>
-                  <li>Evaluated budgets, performance requirements and legal issues to incorporate technical considerations into application engineering plans.</li>
-                  <li>Coached students who enrolled for Blockchain development course in the Nupat Technologies’ bootcamp</li>
+                  <li>Researched, designed, developed and tested blockchain technologies in line with product requirements.</li>
+                  <li>Collaborated with cross-functional teams to understand user requirements and translated them into technical specifications for blockchain integration with the Metamask wallet.</li>
+                  <li>Conducted security audits and performed code reviews to ensure the robustness and reliability of blockchain applications and wallet integrations.</li>
                 </ul>
-                <span><strong>Technologies Used: </strong>Solidity, Typescript, NodeJS, NextJS, SASS, ExpressJS, Ethereum, IPFS, Soft Skills</span>
+                <span><strong>Technologies Used: </strong>Solidity, Typescript, NodeJS, NextJS, SCSS, ExpressJS, IPFS, Soft Skills</span>
               </div>
             </div>
             <div className={styles.payoneer} onClick={(e) => viewWork(e, 1)}>
@@ -165,7 +165,7 @@ const Experience = () => {
             <div className={styles.circle}><AddIcon className={activeIndex !== 3 ? styles.icon : styles.inActiveIcon}/></div>
             <div className={styles.brief}>
                 <span className={styles.span1}>Andela</span>
-                <span className={styles.span2}>Full Stack Engineer</span>
+                <span className={styles.span2}>Full-Stack Engineer</span>
                 <div className={styles.span3}>
                 <span className={styles.country}>Nigeria (Hybrid)</span>
                 <div className={styles.date}>
@@ -179,7 +179,7 @@ const Experience = () => {
                   <li>Orchestrated RESTful API’s using Node JS, Express JS and Mongo DB that was used to serve data to ReactJS frontend framework for building high end and scalable websites for clients.</li>
                   <li>Maintained understanding of current web technologies and programming practices through continuing education and participation in professional conferences and workshops.</li>
                 </ul>
-                <span><strong>Technologies Used: </strong>Typescript, NodeJS, ReactJS, SASS, ExpressJS, MongoDB, Soft Skills</span>
+                <span><strong>Technologies Used: </strong>Typescript, NodeJS, ReactJS, SCSS, ExpressJS, MongoDB, Soft Skills</span>
               </div>
             </div>
           </div>

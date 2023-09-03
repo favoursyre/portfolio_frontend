@@ -5,12 +5,23 @@
 
 //Commencing the code -->
 .main {
-    border: 1px solid black;
+    //border: 1px solid black;
     @include size(100%, 100%);
     top: 165%;
     @include flexBar($align: center, $justify: center, $gap: 3%);
     left: 0%;
     font-family: "Inter";
+
+    /* Styles for the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: $text-color-4;  /* Color of the thumb */
+        border-radius: 5px;  /* Rounded corners of the thumb */
+    }
+    
+    /* Styles for the scrollbar thumb when hovering */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $text-color-4;  /* Color of the thumb on hover */
+    }
 
     @include tabletPro {
         top: 90%;
@@ -50,10 +61,10 @@
             //border: 1px solid red;
             @include text-layout($size: 13px, $l_height: 20px, $color: $primary-color);
             @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
-            @include size(100%, 5%);
+            @include size(100%, 3%);
 
             @include phonePro {
-                height: 10%;
+                height: 5%;
                 font-size: 12px;
             }
 
@@ -66,10 +77,14 @@
             //border: 1px solid red;
             @include text-layout($size: 40px, $l_height: 45px, $color: $text-color-2, $weight: 600);
             @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
-            @include size(100%, 12%);
+            @include size(100%, 10%);
             margin-top: 0px;
             font-family: "Aclonica";
             margin-bottom: 20px;
+
+            @include tabletPro {
+                height: 11%;
+            }
 
             @include tablet {
                 font-size: 30px;
@@ -88,11 +103,12 @@
             @include phoneMini {
                 margin-top: 0px;
                 font-size: 20px;
+                height: 13%;
             }
         }
 
         .skills {
-            @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: row);
+            @include flexBar($position: relative, $align: flex-start, $justify: space-between, $flex_d: row);
             column-gap: 2%;
             row-gap: 4%;
             flex-wrap: wrap;
@@ -140,14 +156,14 @@
                     @include size(100%, 75%);
 
                     .image {
-                        border: 1px solid red;
-                        @include flexBar($position: relative, $align: space-between, $justify: center);
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center);
                         @include size(90%, 70%);
 
                         img {
                             position: relative;
-                            object-fit: cover;
-                            @include size(100%, 100%);
+                            object-fit: contain;
+                            @include size(90%, 90%);
                         }
                     }
 
@@ -158,11 +174,11 @@
                         @include text-layout($size: 12px, $l_height: 30px, $color: $text-color-2, $weight: 600);
 
                         @include phonePro {
-                            font-size: 10px;
+                            font-size: 8px;
                         }
 
                         @include phoneMini {
-                            font-size: 8px;
+                            font-size: 6px;
                         }
                     }
                 }
@@ -182,8 +198,9 @@
                         border-radius: 100px;
 
                         .bar {
+                            //border: 1px solid red;
                             @include flexBar($position: relative, $align: center, $justify: flex-start);
-                            @include size(50%, 100%);
+                            height: 100%;
                             background-color: $primary-color;
                         }
                     }

@@ -5,12 +5,17 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import styles from "./layout.module.scss"
 import { backend } from './utils/utils';
+import { Provider } from "react-redux";
+import store from "./utils/redux/store"
 
 ///Commencing the code
 
 ///Declaring the metadata
 export const metadata = {
   title: 'Favour Syre',
+  icons: {
+    icon: 'uchiha_.png',
+  },
   description: 'Portfolio website for freelancing and hiring software engineer',
   keywords: "software engineeer, web, blockchain, cyber security, AI, ML"
 }
@@ -32,7 +37,7 @@ async function getContacts() {
       const contacts = await response.json();
       return contacts;
 } catch (error) {
-    console.error(error);
+    console.log(`Contacts: ${error}`);
 }
 }
 
@@ -45,12 +50,12 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${styles.html}`}>
-      <body>
-          <Header />
-          {/* <ToastContainer /> */}
-          <main className='container'>{children}</main>
-          <Footer contact_={contacts} />
-      </body>
-    </html>
+        <body>
+            <Header />
+            {/* <ToastContainer /> */}
+            <main className='container'>{children}</main>
+            <Footer contact_={contacts} />
+        </body>
+      </html>
   )
 }

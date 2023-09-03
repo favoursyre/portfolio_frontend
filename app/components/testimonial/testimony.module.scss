@@ -5,7 +5,7 @@
 
 //Commencing the code -->
 .main {
-    border: 1px solid red;
+    //border: 1px solid red;
     @include size(100%, 70%);
     top: 520%;
     @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 1%);
@@ -43,13 +43,13 @@
     }
 
     .span1 {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include text-layout($size: 13px, $l_height: 20px, $color: $text-color-4);
         @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
-        @include size(50%, 7%);
+        @include size(50%, 3%);
 
         @include phonePro {
-            @include size(60%, 5%);
+            @include size(60%, 3%);
             font-size: 12px;
         }
 
@@ -60,11 +60,11 @@
     }
 
     h3 {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include text-layout($size: 40px, $l_height: 45px, $color: $primary-color, $weight: 600);
         @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
         @include size(50%, 10%);
-        margin-top: 10px;
+        margin-top: 5px;
         font-family: "Aclonica";
         margin-bottom: 20px;
 
@@ -91,7 +91,7 @@
     }
 
     .testimony {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
         @include size(60%, 70%);
 
@@ -160,9 +160,9 @@
                 @include text-layout($size: 14px, $l_height: 20px, $color: $text-color-2, $weight: 600);
 
                 .name {
-                    border: 1px solid red;
+                    //border: 1px solid red;
                     @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $flex_d: column, $gap: 0%);
-                    @include size(20%, 100%);
+                    @include size(30%, 100%);
                     top: 10%;
 
                     @include tablet {
@@ -176,6 +176,7 @@
 
                     @include phonePro {
                         @include size(40%, 100%);
+                        font-size: 12px;
                     }
 
                     @include phoneMini {
@@ -192,19 +193,43 @@
                 }
 
                 .stars {
-                    border: 1px solid red;
+                    //border: 1px solid red;
                     @include flexBar($position: relative, $align: flex-start, $justify: flex-start, $gap: 2%);
                     @include size(30%, 100%);
 
                     @include phonePro {
                         @include size(40%, 100%);
+                        left: 4%;
+                    }
+
+                    @include phoneMini {
+                        left: 8%;
+                        top: 8%;
+                    }
+
+                    .icon {
+                        //border: 1px solid red;
+                        color: $primary-color;
+                        font-size: 1.4rem;
+
+                        @include tabletPro {
+                            font-size: 1.2rem;
+                        }
+
+                        @include phonePro {
+                            font-size: 1rem;
+                        }
+
+                        @include phoneMini {
+                            font-size: 0.65rem;
+                        }
                     }
                 }
             }
 
             .brief2 {
                 //border: 1px solid red;
-                @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+                @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
                 @include size(90%, 65%);
                 top: -5%;
                 text-align: center;
@@ -240,7 +265,7 @@
         }
 
         @include phonePro {
-            border: 1px solid red;
+            //border: 1px solid red;
             left: 10%;
             height: 100%;
             top: 0%;
@@ -268,7 +293,7 @@
         }
 
         @include phonePro {
-            border: 1px solid red;
+            //border: 1px solid red;
             left: 15%;
             transform: rotate(260.93deg);
         }

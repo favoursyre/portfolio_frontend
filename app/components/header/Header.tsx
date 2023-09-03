@@ -5,9 +5,9 @@
 import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent, useContext, createContext } from 'react';
 import { notify } from '@/app/utils/clientUtils';
-import { capitalizeFirstLetter, getItem, hireModalKey, sleep } from '@/app/utils/utils';
-import { IHireModalContext } from '@/app/utils/interfaces';
-import HireModal from '../modal/hire/Hire';
+import { capitalizeFirstLetter, backend, hireModalKey, sleep } from '@/app/utils/utils';
+import { IHireModalContext, IHire } from '@/app/utils/interfaces';
+//import HireModal from '../modal/hire/Hire';
 import styles from "./header.module.scss"
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -26,7 +26,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import validator from 'validator';
 import EmailIcon from '@mui/icons-material/Email';
 //import { ICartSpec } from '@/app/utils/interfaces';
-import AddIcon from "@mui/icons-material/Add";
+import { useDispatch, useSelector } from "react-redux";
+import { positive, negative } from '../../utils/redux/modal';
 
 ///Commencing the code 
 const HireModalContext = createContext<IHireModalContext>({ hireModal: false, setHireModal: () => {} })
@@ -46,8 +47,8 @@ const Header = () => {
     const [emailAddress, setEmailAddress] = useState<string | undefined>("")
     const [budget, setBudget] = useState<number | undefined>()
     const [description, setDescription] = useState<string | undefined>("")
-    const hireModalStat = getItem(hireModalKey)
-    //const { hireModal, setHireModal } = useContext(false)
+    //const hireModalStat = getItem(hireModalKey)
+    //const dispatch = useDispatch();
     const [hireModal, setHireModal] = useState<boolean>(false)
   //console.log('Current page:', routerPath);
 
@@ -74,33 +75,33 @@ const Header = () => {
     }
 
     //Send the order to the backend
-    // try {
-    //   //console.log('Clicked')
-    //   const inquiry: IInquiry = {firstName, lastName, emailAddress, message}
-    //   console.log("Order: ", inquiry)
-    //   const res = await fetch(`${backend}/inquiry/add/`, {
-    //       method: 'POST',
-    //       body: JSON.stringify(inquiry),
-    //       headers: {
-    //       'Content-Type': 'application/json',
-    //       },
-    //   });
+    try {
+      //console.log('Clicked')
+      const hire: IHire = {clientName, companyName, emailAddress, budget, description}
+      console.log("Order: ", hire)
+      const res = await fetch(`${backend}/hire/add/`, {
+          method: 'POST',
+          body: JSON.stringify(hire),
+          headers: {
+          'Content-Type': 'application/json',
+          },
+      });
       
-    // const data = await res.json();
-    // console.log("Data: ", data);
+    const data = await res.json();
+    console.log("Data: ", data);
 
-    // if (res.ok) {
-    //   notify("success", `Your message was sent successfully`)
-    //   setContactModal(() => false)
-    //   window.location.reload()
-    // } else {
-    //   throw Error(`${data}`)
-    // }
+    if (res.ok) {
+      notify("success", `Your message was sent successfully`)
+      setHireModal(() => false)
+      window.location.reload()
+    } else {
+      throw Error(`${data}`)
+    }
     
-    // } catch (error) {
-    //     console.log("error: ", error)
-    //     notify("error", `${error}`)
-    // }
+    } catch (error) {
+        console.log("error: ", error)
+        notify("error", `${error}`)
+    }
   }
 
   ///This handles the contact modal
@@ -149,10 +150,9 @@ const Header = () => {
         <header className={`${styles.header}`}>
             <div className={styles.logo} onClick={() => router.push('/')}>
                 <img
-                    src="./images/f.png"
+                    src="https://drive.google.com/uc?export=download&id=18qlFm8b1zWrY202Ogd7K3gSOHbmnEX6K"
                     alt="logo"
                 />
-                <span>avoursyre</span>
             </div>
 
             <div className={`${styles.category}`} >
@@ -188,7 +188,7 @@ const Header = () => {
                         <div className={styles.icon}>
                             <CallIcon style={{ fontSize: "1.15rem" }} />
                         </div>
-                        <span><strong>Let's Talk</strong></span>
+                        <span><strong>Let&apos;s Talk</strong></span>
                     </div>
                     <div className={styles.brief}>+234-9090982848</div>
                 </div>
@@ -217,7 +217,7 @@ const Header = () => {
               </button>
             </header>
             <div className={styles.brief}>
-            <span id={styles.brief_2}>I'd love to help</span>
+            <span id={styles.brief_2}>I&apos;d love to help</span>
               <span id={styles.brief_1}>
                 <strong>What project do you have in mind? </strong>
               </span>
@@ -259,7 +259,7 @@ const Header = () => {
                     />
                 </div>
               </div>
-              <div className={`${styles.div_3} ${inter.className}`}>
+              <div className={`${styles.div_3}`}>
                 <textarea
                   placeholder="Job Description"
                   onChange={(e) => setDescription(() => e.target.value)}
@@ -285,10 +285,9 @@ const Header = () => {
         <header className={`${styles.mobileHeader}`}>
             <div className={styles.logo} onClick={() => router.push('/')}>
               <img
-                    src="./images/f.png"
-                    alt="logo"
-                />
-                <span>avoursyre</span>
+                src="https://drive.google.com/uc?export=download&id=18qlFm8b1zWrY202Ogd7K3gSOHbmnEX6K"
+                alt="logo"
+              />
             </div>
             
             <button onClick={(e) => menuButton(e, !menu)}><MenuIcon className={styles.icon} /></button>

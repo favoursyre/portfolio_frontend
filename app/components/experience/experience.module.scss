@@ -5,7 +5,7 @@
 
 //Commencing the code -->
 .main {
-    border: 1px solid blue;
+    //border: 1px solid blue;
     @include size(100%, 90%);
     top: 265%;
     @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 0%);
@@ -50,13 +50,14 @@
     }
 
     .titleHead {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include text-layout($size: 13px, $l_height: 20px, $color: $text-color-3);
         @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
         @include size(100%, 3%);
 
         @include phonePro {
             font-size: 12px;
+            height: 2%;
         }
 
         @include phone {
@@ -69,17 +70,18 @@
     }
 
     h3 {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include text-layout($size: 40px, $l_height: 45px, $color: $primary-color, $weight: 600);
         @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
         @include size(100%, 10%);
-        margin-top: 10px;
+        margin-top: 0px;
         margin-bottom: 5px;
         font-family: "Aclonica";
 
         @include tablet {
             font-size: 30px;
             margin-top: 0px;
+            height: 7%;
         }
 
         @include tabletMini {
@@ -90,7 +92,7 @@
         @include phonePro {
             font-size: 25px;
             margin-top: 0px;
-            height: 5%;
+            height: 4%;
         }
 
         @include phone {
@@ -98,13 +100,13 @@
         }
 
         @include phoneMini {
-            height: 4%;
+            height: 3%;
             font-size: 20px;
         }
     }
 
     .container {
-        border: 1px solid red;
+        //border: 1px solid red;
         @include flexBar($position: relative, $align: center, $justify: center, $gap: 1%);
         @include size(85%, 80%);
         left: 2%;
@@ -138,7 +140,7 @@
             }
 
             .header {
-                border: 1px solid green;
+                //border: 1px solid green;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
                 @include size(100%, 10%);
                 padding: 0% 1%;
@@ -172,7 +174,7 @@
             }
 
             .body {
-                border: 1px solid red;
+                //border: 1px solid red;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 2%);
                 @include size(100%, 88%);
                 padding: 0% 1%;
@@ -362,7 +364,7 @@
             }
 
             .header {
-                border: 1px solid green;
+                //border: 1px solid green;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 2%);
                 @include size(100%, 10%);
                 padding: 0% 1%;
@@ -398,7 +400,7 @@
             }
 
             .body {
-                border: 1px solid red;
+                //border: 1px solid red;
                 @include flexBar($position: relative, $align: center, $justify: flex-start, $flex_d: column, $gap: 2%);
                 @include size(100%, 90%);
                 transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -451,7 +453,7 @@
                             @include text-layout($size: 10px, $l_height: 25px, $color: $text-color-3, $weight: 500);
                             height: 25%;
                             @include flexBar($position: relative, $align: flex-start, $justify: space-between, $gap: 2%);
-                            border: 1px solid black;
+                            //border: 1px solid black;
 
                             @include phoneMini {
                                 font-size: 7px;
@@ -460,7 +462,7 @@
 
                             .country {
                                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 5%);
-                                border: 1px solid red;
+                                //border: 1px solid red;
                                 @include size(30%, 100%);
 
                                 @include phoneMini {
@@ -472,12 +474,12 @@
                             }
     
                             .date {
-                                border: 1px solid red;
+                                //border: 1px solid red;
                                 @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 5%);
                                 @include size(40%, 100%);
                                 color: $primary-color;
 
-                                @include tabletMini {
+                                @include tablet {
                                     width: 50%;
                                 }
 
@@ -528,7 +530,7 @@
                             }
 
                             li {
-                                border: 1px solid red;
+                                //border: 1px solid red;
                                 position: relative;
                                 left: -2.2%;
                                 width: 100%;

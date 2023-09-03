@@ -25,7 +25,7 @@ const Hero = () => {
             <div className={styles.image}>
                 <div className={styles.imageFrame}>
                     <img
-                        src="./images/pp1.jpg"
+                        src="https://drive.google.com/uc?export=download&id=1m394hmoLMu4vjOQCtjxV01Jv_0ZWrwDh"
                         alt=""
                     />
                 </div>
@@ -47,8 +47,8 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-            <img id={styles.dot_1} src="./images/dots.png" alt=""></img>
-            <img id={styles.dot_2} src="./images/dots1.png" alt=""></img>
+            <img id={styles.dot_1} src="https://drive.google.com/uc?export=download&id=1Co5DsLhkA52JBu_NwskFl7k4PQApi17U" alt=""></img>
+            <img id={styles.dot_2} src="https://drive.google.com/uc?export=download&id=1ljsS_8gYNUTimLwbicugEynPvPSJwZT4" alt=""></img>
         </div>
         <div className={`${styles.stats}`}>
             <div className={styles.container}>
@@ -72,7 +72,7 @@ const Hero = () => {
                 </div>
                 <div className={styles.clients}>
                 <div className={styles.icon}>
-                        <EmojiPeopleIcon className={styles.iconTag} />
+                        <InsertEmoticonIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
                         <span className={styles.span1}>127+ Satisfied</span>
