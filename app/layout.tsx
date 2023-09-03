@@ -49,7 +49,7 @@ export default async function RootLayout({
   const contacts = await getContacts()
 
   return (
-    <html lang="en" className={`${styles.html}`}>
+    <html lang="en">
         <body>
             <Header />
             {/* <ToastContainer /> */}
