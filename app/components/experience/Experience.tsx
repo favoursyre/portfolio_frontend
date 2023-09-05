@@ -99,7 +99,7 @@ const Experience = () => {
               <div className={styles.circle}><AddIcon className={activeIndex !== 0 ? styles.icon : styles.inActiveIcon}/></div>
               <div className={styles.brief}>
                 <span className={styles.span1}>MetaMask</span>
-                <span className={styles.span2}>Full-Stack Blockchain Engineer</span>
+                <span className={styles.span2}>Software Engineer</span>
                 <div className={styles.span3}>
                 <span className={styles.country}>USA (Remote)</span>
                 <div className={styles.date}>
@@ -148,7 +148,7 @@ const Experience = () => {
                 <span className={styles.country}>Nigeria (Hybrid)</span>
                 <div className={styles.date}>
                   <CalendarMonthIcon className={styles.calendar} />
-                  <span>February 2018 - November 2020</span>
+                  <span>February 2019 - November 2020</span>
                 </div>
               </div>
               </div>
@@ -170,7 +170,7 @@ const Experience = () => {
                 <span className={styles.country}>Nigeria (Hybrid)</span>
                 <div className={styles.date}>
                   <CalendarMonthIcon className={styles.calendar} />
-                  <span>April 2016 - February 2018</span>
+                  <span>April 2018 - February 2019</span>
                 </div>
               </div>
               </div>

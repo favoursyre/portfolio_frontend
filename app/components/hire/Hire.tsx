@@ -5,7 +5,7 @@
 import styles from "./hire.module.scss"
 import { useState, useEffect, MouseEvent, FormEvent } from "react"
 import { useRouter } from 'next/navigation';
-import { notify } from '@/app/utils/clientUtils';
+import { notify, visitSocialLink } from '@/app/utils/clientUtils';
 import { backend, hireModalKey, capitalizeFirstLetter } from '@/app/utils/utils';
 import { IHire } from "@/app/utils/interfaces";
 import WhatsappIcon from "@mui/icons-material/WhatsApp";
@@ -137,11 +137,11 @@ const Hire = () => {
                 </div>
             </div>
             <div className={styles.imgSocials}>
-                <button className={styles.instagram}><InstagramIcon /></button>
-                <button className={styles.facebook}><FacebookIcon /></button>
-                <button className={styles.twitter}><TwitterIcon /></button>
-                <button className={styles.linkedin}><LinkedInIcon /></button>
-                <button className={styles.whatsapp}><WhatsappIcon /></button>
+                <button className={styles.instagram} onClick={(e) => visitSocialLink(e, "instagram")}><InstagramIcon /></button>
+                <button className={styles.facebook} onClick={(e) => visitSocialLink(e, "facebook")}><FacebookIcon /></button>
+                <button className={styles.twitter} onClick={(e) => visitSocialLink(e, "twitter")}><TwitterIcon /></button>
+                <button className={styles.linkedin} onClick={(e) => visitSocialLink(e, "linkedin")}><LinkedInIcon /></button>
+                {/* <button className={styles.whatsapp}><WhatsappIcon /></button> */}
             </div>
           </div>
           <div className={styles.form}>

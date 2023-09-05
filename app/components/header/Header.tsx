@@ -5,7 +5,8 @@
 import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent, useContext, createContext } from 'react';
 import { notify } from '@/app/utils/clientUtils';
-import { capitalizeFirstLetter, backend, hireModalKey, sleep } from '@/app/utils/utils';
+import { capitalizeFirstLetter, backend, sleep } from '@/app/utils/utils';
+import { visitSocialLink } from '@/app/utils/clientUtils';
 import { IHireModalContext, IHire } from '@/app/utils/interfaces';
 //import HireModal from '../modal/hire/Hire';
 import styles from "./header.module.scss"
@@ -162,9 +163,9 @@ const Header = () => {
                   setHireModal(() => true)
                   console.log("modal: ", hireModal)
                 }}><span>Hire Me</span></button>
-                <button onClick={() => router.push('/#experience')}><span>Expertise</span></button>
-                <button onClick={() => router.push('/#expertise')}><span>Experience</span></button>
-                <button onClick={() => router.push('/#projects')}><span>Projects</span></button>
+                <button onClick={() => router.push('/#expertise')}><span>Expertise</span></button>
+                <button onClick={() => router.push('/#experience')}><span>Experience</span></button>
+                <button onClick={() => router.push('/#project')}><span>Projects</span></button>
                 <button onClick={() => router.push('/#testimony')}><span>Testimonial</span></button>
             </div>
         </header>
@@ -203,11 +204,11 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.imgSocials}>
-                <button className={styles.instagram}><InstagramIcon /></button>
-                <button className={styles.facebook}><FacebookIcon /></button>
-                <button className={styles.twitter}><TwitterIcon /></button>
-                <button className={styles.linkedin}><LinkedInIcon /></button>
-                <button className={styles.whatsapp}><WhatsappIcon /></button>
+                <button className={styles.instagram} onClick={(e) => visitSocialLink(e, "instagram")}><InstagramIcon /></button>
+                <button className={styles.facebook} onClick={(e) => visitSocialLink(e, "facebook")}><FacebookIcon /></button>
+                <button className={styles.twitter} onClick={(e) => visitSocialLink(e, "twitter")}><TwitterIcon /></button>
+                <button className={styles.linkedin} onClick={(e) => visitSocialLink(e, "linkedin")}><LinkedInIcon /></button>
+                {/* <button className={styles.whatsapp}><WhatsappIcon /></button> */}
             </div>
           </div>
           <div className={styles.form}>
@@ -275,11 +276,11 @@ const Header = () => {
         </div>
         <div className={styles.socials}>
             <div className={styles.container}>
-                <button className={styles.instagram}><InstagramIcon /></button>
-                <button className={styles.facebook}><FacebookIcon /></button>
-                <button className={styles.twitter}><TwitterIcon /></button>
-                <button className={styles.linkedin}><LinkedInIcon /></button>
-                <button className={styles.whatsapp}><WhatsappIcon /></button>
+                <button className={styles.instagram} onClick={(e) => visitSocialLink(e, "instagram")}><InstagramIcon /></button>
+                <button className={styles.facebook} onClick={(e) => visitSocialLink(e, "facebook")}><FacebookIcon /></button>
+                <button className={styles.twitter} onClick={(e) => visitSocialLink(e, "twitter")}><TwitterIcon /></button>
+                <button className={styles.linkedin} onClick={(e) => visitSocialLink(e, "linkedin")}><LinkedInIcon /></button>
+                {/* <button className={styles.whatsapp}><WhatsappIcon /></button> */}
             </div>
         </div> 
         <header className={`${styles.mobileHeader}`}>
@@ -296,9 +297,9 @@ const Header = () => {
         <div className={`${menuBar ? styles.activeMenu : styles.inActiveMenu}`}>
           <button onClick={(e) => menuBarNav(e, "/#about")}><span>About Me</span></button>
           <button onClick={(e) => menuBarNav(e, "hireModal")}><span>Hire Me</span></button>
-          <button onClick={(e) => menuBarNav(e, '/#experience')}><span>Expertise</span></button>
-          <button onClick={(e) => menuBarNav(e, '/#expertise')}><span>Experience</span></button>
-          <button onClick={(e) => menuBarNav(e, '/#projects')}><span>Projects</span></button>
+          <button onClick={(e) => menuBarNav(e, '/#expertise')}><span>Expertise</span></button>
+          <button onClick={(e) => menuBarNav(e, '/#experience')}><span>Experience</span></button>
+          <button onClick={(e) => menuBarNav(e, '/#project')}><span>Projects</span></button>
           <button onClick={(e) => menuBarNav(e, '/#testimony')}><span>Testimonial</span></button>
         </div> 
         </div>

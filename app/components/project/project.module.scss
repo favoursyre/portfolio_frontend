@@ -67,7 +67,7 @@
 
 .main {
     //border: 1px solid red;
-    @include size(100%, 110%);
+    @include size(100%, 730px);
     top: 355%;
     @include flexBar($align: flex-end, $justify: center, $gap: 3%);
     left: 0%;
@@ -75,23 +75,28 @@
 
     @include tabletPro {
         top: 180%;
-        height: 50%;
+        height: 690px;
     
     }
 
     @include tablet {
         top: 215%;
-        height: 50%;
+        height: 590px;
     }
 
     @include tabletMini {
         top: 215%;
-        height: 50%;
+        height: 510px;
     }
 
     @include phonePro {
         top: 330%;
-        height: 60%;
+        height: 550px;
+    }
+
+    @include phone {
+        height: 550px;
+        top: 333%;
     }
 
     @include phoneMini {
@@ -194,6 +199,11 @@
             overflow-y: auto;
             overflow-x: hidden;
 
+            @include phonePro {
+                height: 65%;
+                top: 3%;
+            }
+
             .carousel {
                 //border: 1px solid $primary-color;
                 background-color: $tertiary-color;
@@ -214,7 +224,7 @@
                     overflow: hidden;
 
                     @include tablet {
-                        border: 1px solid red;
+                        //border: 1px solid red;
                         height: 65%;
                     }
 
@@ -275,7 +285,7 @@
                         }
 
                         @include phoneMini {
-                            font-size: 10px;
+                            font-size: 8px;
                         }
                     }
 

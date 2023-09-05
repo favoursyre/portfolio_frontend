@@ -36,11 +36,10 @@ const About = () => {
         <div className={styles.left}>
             <div className={styles.span1}>A brief introduction</div>
             <h3>About Me</h3>
-           <span className={styles.span2}>I&apos;m a Software Engineer with 7+ years&apos; worth of experience facilitating cutting-edge engineering solutions and creating
+           <span className={styles.span2}>I&apos;m a Software Engineer with 5+ years&apos; worth of experience facilitating cutting-edge engineering solutions and creating
             value with a wide range of technological skills. I have proficient knowledge in Web Engineering, Blockchain Engineering
             and Cyber Security. I enjoy building software and solving real world problems. <br />
-            With my strong technical skills, passion for innovation and proven track record, I am confident in my ability to contribute significantly to software projects, drive success, and exceed client expectations. I’m certain I can be relied upon to help
-            assist you achieve your goals</span>
+            With my strong technical skills, passion for innovation and proven track record, I am confident in my ability to contribute significantly to software projects, drive success, and exceed client expectations. </span>
         </div>
         <div className={styles.right}>
             <div className={styles.bio}>

@@ -6,7 +6,7 @@
 //Commencing the code -->
 .main {
     //border: 1px solid red;
-    @include size(100%, 50%);
+    @include size(100%, 350px);
     top: 465%;
     font-family: "Inter";
     @include flexBar($align: flex-end, $justify: center, $gap: 3%);
@@ -14,33 +14,33 @@
 
     @include tabletPro {
         top: 230%;
-        height: 30%;
+        height: 400px;
     }
 
     @include tablet {
         top: 265%;
-        height: 30%;
+        height: 400px;
     }
 
     @include tabletMini {
         top: 265%;
-        height: 32%;
+        height: 350px;
     }
 
     @include phonePro {
         top: 390%;
-        height: 35%;
+        height: 350px;
         //padding: 2% 0%;
     }
 
     @include phone {
         top: 400%;
-        height: 45%;
+        height: 390px;
     }
 
     @include phoneMini {
         top: 460%;
-        height: 55%;
+        height: 340px;
     }
 
     .container {
@@ -173,40 +173,40 @@
     }
 
     @include phoneMini {
-        border: 1px solid blue;
+        //border: 1px solid blue;
         height: 597%;
     }
 
     .container {
         //border: 1px solid red;
         @include flexBar ($position: sticky, $align: center, $justify: flex-start, $gap: 0%, $flex_d: row);
-        @include size(60%, 12%);
+        @include size(60%, 500px);
         top: 15%;
         z-index: 200;
         border-radius: 10px;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.2);
 
-
-
         @include tabletPro {
-            @include size(80%, 15%);
+            @include size(80%, 550px);
         }
 
         @include tablet {
-            @include size(90%, 15%);
+            @include size(90%, 550px);
         }
 
         @include tabletMini {
-            @include size(90%, 15%);
+            @include size(90%, 550px);
         }
 
         @include phonePro {
-            @include size(90%, 15%);
+            @include size(90%, 650px);
             flex-direction: column-reverse;
+            top: 7%;
         }
 
         @include phoneMini {
             top: 5%;
+            height: 550px;
         }
     
         .image {

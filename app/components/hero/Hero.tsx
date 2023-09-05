@@ -8,6 +8,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import GradingIcon from '@mui/icons-material/Grading';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
+import { MouseEvent } from "react";
 
 ///Commencing the code 
 
@@ -18,6 +19,12 @@ import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 const Hero = () => {
     const router = useRouter()
   //console.log('Current page:', routerPath);
+
+  const downloadCV = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+    e.preventDefault()
+
+    router.push("https://drive.google.com/uc?export=download&id=1juzM2lkt5Hel9YlqrHjIRqbFYJjjNfwG")
+  }
 
   return (
     <>
@@ -39,7 +46,7 @@ const Hero = () => {
                 With a keen eye for innovation, I specialize in developing dynamic web applications and leveraging the transformative potential of blockchain technology. From elegant front-end designs to robust back-end architectures, I bring ideas to life with meticulous attention to detail and a commitment to excellence.
                 </span>
                 <div className={`${styles.buttons}`}>
-                    <button className={styles.btn1}>
+                    <button className={styles.btn1} onClick={(e) => downloadCV(e)}>
                         <span>Download CV</span>
                     </button>
                     <button className={styles.btn2} onClick={() => router.push('/#about')} >
@@ -57,7 +64,7 @@ const Hero = () => {
                         <CodeIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
-                        <span className={styles.span1}>7+ Years Work</span>
+                        <span className={styles.span1}>5+ Years Work</span>
                         <span className={styles.span2}>Experience</span>
                     </div>
                 </div>
@@ -66,7 +73,7 @@ const Hero = () => {
                         <GradingIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
-                        <span className={styles.span1}>118+ Projects</span>
+                        <span className={styles.span1}>127+ Projects</span>
                         <span className={styles.span2}>Completed</span>
                     </div>
                 </div>
@@ -75,7 +82,7 @@ const Hero = () => {
                         <InsertEmoticonIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
-                        <span className={styles.span1}>127+ Satisfied</span>
+                        <span className={styles.span1}>118+ Satisfied</span>
                         <span className={styles.span2}>Clients</span>
                     </div>
                 </div>

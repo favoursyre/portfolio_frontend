@@ -3,6 +3,7 @@
 
 ///Libraries -->
 import { toast } from 'react-toastify';
+import { MouseEvent } from 'react';
 
 ///Commencing the code
 
@@ -38,4 +39,25 @@ export const notify = (type: string, message: string): void => {
             break
     }
     
+}
+
+///This links opens the social link
+export const visitSocialLink = (e:  MouseEvent<HTMLButtonElement, globalThis.MouseEvent>, social: string) => {
+    e.preventDefault()
+
+    if (window) {
+        if (social === "instagram") {
+            window.open("https://www.instagram.com/favoursyre", '_blank');
+        } else if (social === "facebook") {
+            window.open("https://web.facebook.com/Favour.Syre", "_blank")
+        } else if (social === "twitter") {
+            window.open("https://twitter.com/favoursyre", "_blank")
+        } else if (social === "linkedin") {
+            window.open("https://www.linkedin.com/in/favour-ndubuisi-7b019786/", "_blank")
+        } else {
+            undefined
+        }
+    } else {
+        undefined
+    }
 }

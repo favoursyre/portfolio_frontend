@@ -6,6 +6,8 @@ import Footer from './components/footer/Footer';
 import styles from "./layout.module.scss"
 import { backend } from './utils/utils';
 import { Provider } from "react-redux";
+//import { Head, Html, Main, NextScript } from "next/document";
+import Head from 'next/head';
 import store from "./utils/redux/store"
 
 ///Commencing the code
@@ -49,13 +51,18 @@ export default async function RootLayout({
   const contacts = await getContacts()
 
   return (
-    <html lang="en">
-        <body>
-            <Header />
+    <html lang="en" className={styles.html} style={{scrollBehavior:'smooth'}}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      </Head>
+      <div className={styles.mainDiv}> 
+        <body className={styles.body}>
+          <Header />
             {/* <ToastContainer /> */}
             <main className='container'>{children}</main>
             <Footer contact_={contacts} />
         </body>
+        </div>
       </html>
   )
 }

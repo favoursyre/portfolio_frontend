@@ -11,28 +11,28 @@
     left: 0px;
     padding: 1% 1%;
     font-family: "Inter";
-    @include size(98%, 70%);
+    @include size(98%, 470px);
 
     @include tabletPro {
         top: 6.5%;
-        height: 40%;
+        height: 530px;
     }
 
     @include tablet {
         top: 6.5%;
-        height: 50%;
+        height: 590px;
         //width: 100%;
     }
 
     @include tabletMini {
         top: 9%;
-        height: 50%;
+        height: 490px;
         //width: 100%;
     }
 
     @include phonePro {
         top: 8%;
-        height: 80%;
+        height: 700px;
         flex-direction: column;
         gap: 0%;
         //width: 100%;
@@ -40,10 +40,14 @@
 
     @include phone {
         top: 8%;
-        height: 85%;
+        height: 700px;
         flex-direction: column;
         gap: 0%;
         //width: 100%;
+    }
+
+    @include phoneMini {
+        height: 550px;
     }
 
     .image {
@@ -106,6 +110,7 @@
 
         @include phoneMini {
             justify-content: flex-start;
+            top: 2%;
         }
 
         .brief1 {
@@ -178,12 +183,13 @@
 
             @include phonePro {
                 @include size(100%, 40%);
+                line-height: 20px;
                 text-align: center;
             }
 
             @include phoneMini {
                 font-size: 12px;
-                line-height: 20px;
+                line-height: 18px;
                 top: 8%;
             }
         }
@@ -214,7 +220,7 @@
             }
 
             @include phoneMini {
-                top: 25%;
+                top: 20%;
                 height: 25%;
             }
 
@@ -328,35 +334,36 @@
     top: 85%;
     font-family: "Poppins";
     left: 0px;
-    @include size(100%, 12%);
+    @include size(100%, 80px);
 
     @include tabletPro {
-        height: 7%;
+        height: 80px;
         top: 46%;
     }
 
     @include tablet {
-        height: 7%;
+        height: 80px;
         top: 57%;
     }
 
     @include tabletMini {
-        height: 8%;
+        height: 80px;
         top: 57%;
     }
 
     @include phonePro {
-        top: 90%;
-        height: 9%;
+        top: 85%;
+        height: 90px;
     }
 
     @include phone {
         top: 90%;
-        height: 9%;
+        height: 90px;
     }
 
     @include phoneMini {
-        top: 92%;
+        top: 90%;
+        height: 70px;
     }
 
     .container {
@@ -430,6 +437,7 @@
 
                 @include tabletPro {
                     width: 60%;
+                    left: 2%;
                 }
 
                 @include tablet {
@@ -444,6 +452,7 @@
                     //border: 1px solid red;
                     width: 75%;
                     gap: 0%;
+                    left: 4%;
                 }
 
                 .span1 {
