@@ -255,8 +255,8 @@
             }
 
             @include phonePro {
-                @include size(100%, 30%);
-                background-position: left 80%;
+                @include size(100%, 50%);
+                background-position: 70%;
                 //background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../public/images/contact1.jpg');
                 border-radius: 0px 0px 10px 10px;
             }
@@ -427,7 +427,7 @@
             }
 
             @include phonePro {
-                @include size(100%, 70%);
+                @include size(100%, 50%);
                 border-radius: 10px 10px 0px 0px;
             }
 
@@ -442,7 +442,7 @@
                 }
 
                 @include phone {
-                    top: -20%;
+                    top: -5%;
                 }
 
                 button {
@@ -464,6 +464,10 @@
                 @include size(90%, 10%);
                 @include text-layout($size: 16px, $color: $text-color-1, $l_height: 24px);
                 top: -20%;
+
+                @include phonePro {
+                    top: 0%;
+                }
 
                 @include phoneMini {
                     font-size: 13px;
@@ -618,6 +622,10 @@
                 width: 90%;
                 position: relative;
                 top: -15%;
+
+                @include phonePro {
+                    top: 10%;
+                }
 
                 @include phoneMini {
                     font-size: 12px;

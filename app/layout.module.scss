@@ -47,5 +47,18 @@
         @include phonePro {
             overflow-x: hidden !important;
         }
+
+        button:active {
+
+            @include tabletPro {
+                border: none;
+                background-color: transparent;
+            }
+
+            @include phonePro {
+                border: none;
+                background-color: transparent;
+            }
+        }
     }
 }

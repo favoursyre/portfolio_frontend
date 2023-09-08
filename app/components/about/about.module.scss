@@ -104,18 +104,18 @@
             font-family: "Aclonica";
 
             @include tablet {
-                margin-top: 0px;
+                margin-top: 5px;
                 font-size: 30px;
             }
 
             @include tabletMini {
-                margin-top: 0px;
+                margin-top: 5px;
                 font-size: 25px;
             }
 
             @include phonePro {
                 justify-content: center;
-                margin-top: 0px;
+                margin-top: 5px;
                 font-size: 25px;
                 height: 10%;
                 text-align: center;

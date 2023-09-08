@@ -455,6 +455,10 @@
                             @include flexBar($position: relative, $align: flex-start, $justify: space-between, $gap: 2%);
                             //border: 1px solid black;
 
+                            @include phonePro {
+                                font-size: 8px;
+                            }
+
                             @include phoneMini {
                                 font-size: 7px;
                                 gap: 0%;
@@ -500,6 +504,7 @@
     
                                 .calendar {
                                     font-size: 0.8rem;
+                                   // border: 1px solid red;
 
                                     @include phoneMini {
                                         font-size: 0.5rem;
@@ -527,6 +532,7 @@
                             margin-bottom: 5px;
 
                             @include phonePro {
+                                line-height: 12px;
                             }
 
                             li {
