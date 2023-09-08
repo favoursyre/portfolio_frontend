@@ -74,6 +74,7 @@
             border-radius: 100%;
             box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.3);
             overflow: hidden;
+            z-index: 1;
 
             @include phonePro {
                 @include size(210px, 210px);
@@ -292,7 +293,7 @@
 
         @include phone {
             //border: 1px solid red;
-            height: 85%;
+            height: 90%;
             //@include size(50%, 80%);
             left: -10%;
         }
