@@ -20,6 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CloseIcon from "@mui/icons-material/Close";
 import EmailIcon from '@mui/icons-material/Email';
 import validator from 'validator';
+import GitHubIcon from '@mui/icons-material/GitHub';
 ///Commencing the code 
 
 /**
@@ -141,6 +142,7 @@ const Hire = () => {
                 <button className={styles.facebook} onClick={(e) => visitSocialLink(e, "facebook")}><FacebookIcon /></button>
                 <button className={styles.twitter} onClick={(e) => visitSocialLink(e, "twitter")}><TwitterIcon /></button>
                 <button className={styles.linkedin} onClick={(e) => visitSocialLink(e, "linkedin")}><LinkedInIcon /></button>
+                <button className={styles.github} onClick={(e) => visitSocialLink(e, "github")}><GitHubIcon /></button>
                 {/* <button className={styles.whatsapp}><WhatsappIcon /></button> */}
             </div>
           </div>
@@ -156,7 +158,7 @@ const Hire = () => {
                 <strong>What project do you have in mind? </strong>
               </span>
             </div>
-            <form onSubmit={(e) => sendInquiry(e)}>
+            {/* <form onSubmit={(e) => sendInquiry(e)}>
               <div className={styles.div_1}>
                 <div className={styles.div_11}>
                   <input
@@ -203,8 +205,18 @@ const Hire = () => {
               <button>
                 <span>SEND</span>
               </button>
-            </form>
+            </form> */}
+            <div className={styles.instruction}>
+              <span>Kindly send an email to <strong>favourndubuisi.official@gmail.com</strong> with the following the details; </span>
+              <ul>
+                <li>Name</li>
+                <li>Company's name (if any)</li>
+                <li>Budget</li>
+                <li>Job description</li>
+              </ul>
+            </div>
           </div>
+          
         </div>
         </div>
     </>

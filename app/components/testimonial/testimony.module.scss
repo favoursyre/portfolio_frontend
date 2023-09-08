@@ -6,7 +6,7 @@
 //Commencing the code -->
 .main {
     //border: 1px solid green;
-    @include size(100%, 500px);
+    @include size(100%, 70%);
     top: 520%;
     @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 1%);
     left: 0%;
@@ -14,32 +14,32 @@
 
     @include tabletPro {
         top: 265%;
-        height: 420px;
+        height: 30%;
     }
 
     @include tablet {
         top: 300%;
-        height: 400px;
+        height: 30%;
     }
 
     @include tabletMini {
         top: 300%;
-        height: 400px;
+        height: 40%;
     }
 
     @include phonePro {
         top: 430%;
-        height: 490px;
+        height: 50%;
     }
 
     @include phone {
         top: 450%;
-        height: 430px;
+        height: 50%;
     }
 
     @include phoneMini {
         top: 520%;
-        height: 400px;
+        height: 70%;
     }
 
     .span1 {

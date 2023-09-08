@@ -6,7 +6,7 @@
 //Commencing the code -->
 .main {
     //border: 1px solid black;
-    @include size(100%, 50px);
+    @include size(100%, 10%);
     top: 600%;
     font-family: "Inter";
     //border-top: 1px solid $primary-color;
@@ -17,35 +17,35 @@
 
     @include tabletPro {
         top: 300%;
-        height: 50px;
+        height: 7%;
     }
 
     @include tablet {
         top: 335%;
-        height: 50px;
+        height: 7%;
     }
 
     @include tabletMini {
         top: 345%;
-        height: 50px;
+        height: 7%;
     }
 
     @include phonePro {
         //@include size(40%, 100%);
         top: 485%;
-        height: 50px;
+        height: 7%;
     }
 
     @include phone {
         //@include size(40%, 100%);
         top: 505%;
-        height: 50px;
+        height: 7%;
     }
 
     @include phoneMini {
         //@include size(40%, 100%);
         top: 590%;
-        height: 50px;
+        height: 7%;
     }
 
     .container {

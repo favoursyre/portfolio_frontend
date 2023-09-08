@@ -54,6 +54,8 @@ export const visitSocialLink = (e:  MouseEvent<HTMLButtonElement, globalThis.Mou
             window.open("https://twitter.com/favoursyre", "_blank")
         } else if (social === "linkedin") {
             window.open("https://www.linkedin.com/in/favour-ndubuisi-7b019786/", "_blank")
+        } else if (social === "github") {
+            window.open("https://github.com/favoursyre", "_blank")
         } else {
             undefined
         }

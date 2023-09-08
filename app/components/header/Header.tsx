@@ -29,6 +29,7 @@ import EmailIcon from '@mui/icons-material/Email';
 //import { ICartSpec } from '@/app/utils/interfaces';
 import { useDispatch, useSelector } from "react-redux";
 import { positive, negative } from '../../utils/redux/modal';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 ///Commencing the code 
 const HireModalContext = createContext<IHireModalContext>({ hireModal: false, setHireModal: () => {} })
@@ -208,6 +209,7 @@ const Header = () => {
                 <button className={styles.facebook} onClick={(e) => visitSocialLink(e, "facebook")}><FacebookIcon /></button>
                 <button className={styles.twitter} onClick={(e) => visitSocialLink(e, "twitter")}><TwitterIcon /></button>
                 <button className={styles.linkedin} onClick={(e) => visitSocialLink(e, "linkedin")}><LinkedInIcon /></button>
+                <button className={styles.github} onClick={(e) => visitSocialLink(e, "github")}><GitHubIcon /></button>
                 {/* <button className={styles.whatsapp}><WhatsappIcon /></button> */}
             </div>
           </div>
@@ -223,7 +225,7 @@ const Header = () => {
                 <strong>What project do you have in mind? </strong>
               </span>
             </div>
-            <form onSubmit={(e) => sendInquiry(e)}>
+            {/* <form onSubmit={(e) => sendInquiry(e)}>
               <div className={styles.div_1}>
                 <div className={styles.div_11}>
                   <input
@@ -270,7 +272,16 @@ const Header = () => {
               <button>
                 <span>SEND</span>
               </button>
-            </form>
+            </form> */}
+            <div className={styles.instruction}>
+              <span>Kindly send an email to <strong>favourndubuisi.official@gmail.com</strong> with the following the details; </span>
+              <ul>
+                <li>Name</li>
+                <li>Company's name (if any)</li>
+                <li>Budget</li>
+                <li>Job description</li>
+              </ul>
+            </div>
           </div>
         </div>
         </div>
@@ -280,6 +291,7 @@ const Header = () => {
                 <button className={styles.facebook} onClick={(e) => visitSocialLink(e, "facebook")}><FacebookIcon /></button>
                 <button className={styles.twitter} onClick={(e) => visitSocialLink(e, "twitter")}><TwitterIcon /></button>
                 <button className={styles.linkedin} onClick={(e) => visitSocialLink(e, "linkedin")}><LinkedInIcon /></button>
+                <button className={styles.github} onClick={(e) => visitSocialLink(e, "github")}><GitHubIcon /></button>
                 {/* <button className={styles.whatsapp}><WhatsappIcon /></button> */}
             </div>
         </div> 

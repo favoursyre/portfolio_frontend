@@ -11,28 +11,28 @@
     left: 0px;
     padding: 1% 1%;
     font-family: "Inter";
-    @include size(98%, 470px);
+    @include size(98%, 70%);
 
     @include tabletPro {
         top: 6.5%;
-        height: 530px;
+        height: 40%;
     }
 
     @include tablet {
         top: 6.5%;
-        height: 590px;
+        height: 50%;
         //width: 100%;
     }
 
     @include tabletMini {
         top: 9%;
-        height: 490px;
+        height: 50%;
         //width: 100%;
     }
 
     @include phonePro {
         top: 8%;
-        height: 700px;
+        height: 80%;
         flex-direction: column;
         gap: 0%;
         //width: 100%;
@@ -40,14 +40,14 @@
 
     @include phone {
         top: 8%;
-        height: 700px;
+        height: 85%;
         flex-direction: column;
         gap: 0%;
         //width: 100%;
     }
 
     @include phoneMini {
-        height: 550px;
+        //height: 550px;
     }
 
     .image {
@@ -334,36 +334,36 @@
     top: 85%;
     font-family: "Poppins";
     left: 0px;
-    @include size(100%, 80px);
+    @include size(100%, 12%);
 
     @include tabletPro {
-        height: 80px;
+        height: 7%;
         top: 46%;
     }
 
     @include tablet {
-        height: 80px;
+        height: 7%;
         top: 57%;
     }
 
     @include tabletMini {
-        height: 80px;
+        height: 8%;
         top: 57%;
     }
 
     @include phonePro {
         top: 85%;
-        height: 90px;
+        height: 9%;
     }
 
     @include phone {
         top: 90%;
-        height: 90px;
+        height: 9%;
     }
 
     @include phoneMini {
         top: 90%;
-        height: 70px;
+        //height: 70px;
     }
 
     .container {

@@ -11,8 +11,8 @@
     overflow-x: hidden !important;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    position: absolute;
-    @include size(100%, 100%);
+    //position: absolute;
+    //@include size(100%, 100%);
 
     @include phonePro {
         //border: 1px solid red;

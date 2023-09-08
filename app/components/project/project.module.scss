@@ -67,7 +67,7 @@
 
 .main {
     //border: 1px solid red;
-    @include size(100%, 730px);
+    @include size(100%, 110%);
     top: 355%;
     @include flexBar($align: flex-end, $justify: center, $gap: 3%);
     left: 0%;
@@ -75,27 +75,27 @@
 
     @include tabletPro {
         top: 180%;
-        height: 690px;
+        height: 50%;
     
     }
 
     @include tablet {
         top: 215%;
-        height: 590px;
+        height: 50%;
     }
 
     @include tabletMini {
         top: 215%;
-        height: 510px;
+        height: 50%;
     }
 
     @include phonePro {
         top: 330%;
-        height: 550px;
+        height: 60%;
     }
 
     @include phone {
-        height: 550px;
+        height: 60%;
         top: 333%;
     }
 
