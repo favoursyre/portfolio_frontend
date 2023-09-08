@@ -23,7 +23,7 @@ const Hero = () => {
   const downloadCV = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     e.preventDefault()
 
-    window.open("https://drive.google.com/uc?export=download&id=1juzM2lkt5Hel9YlqrHjIRqbFYJjjNfwG", "_blank")
+    window.open("https://drive.google.com/uc?export=download&id=1rNyFv_0JkBBI5Xs7EmoPDO59fUjaOQJ3", "_blank")
   }
 
   return (
