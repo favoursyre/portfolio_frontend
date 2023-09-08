@@ -96,7 +96,7 @@
 
     @include phone {
         height: 60%;
-        top: 345%;
+        top: 340%;
     }
 
     @include phoneMini {
@@ -277,7 +277,7 @@
 
                         @include phonePro {
                             //border: 1px solid red;
-                            font-size: 10px;
+                            font-size: 12px;
                         }
 
                         @include phonePro {
