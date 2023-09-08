@@ -51,7 +51,7 @@ const Project = ({ project_ }: { project_: Array<IProject> }) => {
                     />
                     <div className={styles.options}>
                         <button className={styles.btn1} onClick={() => window.open(project.sourceCodeLink, "_blank")}><span>View Source Code</span></button>
-                        {project.appLink ? (<button className={styles.btn2}><span>View Application</span></button>) : (<></>)}
+                        {project.appLink ? (<button className={styles.btn2} onClick={() => window.open(project.appLink, "_blank")}><span>View Application</span></button>) : (<></>)}
                     </div>
                 </div>
                 <div className={styles.brief}>
