@@ -260,7 +260,7 @@
                         height: 25%;
                         justify-content: space-between;
 
-                        @include phoneMini {
+                        @include phonePro {
                             font-size: 9px;
                         }
 
