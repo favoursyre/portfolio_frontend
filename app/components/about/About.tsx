@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect, MouseEvent, FormEvent } from 'react';
 import styles from "./about.module.scss"
 import { usePathname, useRouter } from 'next/navigation';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import PersonIcon from '@mui/icons-material/Person';
 import MaleIcon from '@mui/icons-material/Male';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -87,8 +88,8 @@ const About = () => {
                         <span>Music</span>
                     </div>
                     <div className={styles.travel}>
-                        <FlightIcon className={styles.icon} />
-                        <span>Travelling</span>
+                        <TravelExploreIcon className={styles.icon} />
+                        <span>Exploring</span>
                     </div>
                     <div className={styles.reading}>
                         <AutoStoriesIcon className={styles.icon} />

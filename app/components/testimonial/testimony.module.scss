@@ -235,7 +235,7 @@
                 text-align: center;
                 @include text-layout($size: 14px, $l_height: 23px, $color: $text-color-2);
 
-                @include phoneMini {
+                @include phonePro {
                     font-size: 12px;
                     line-height: 20px;
                 }

@@ -48,29 +48,31 @@
             overflow-x: hidden !important;
         }
 
-        button:active {
+        button {
 
-            @include tabletPro {
-                border: none;
-                background-color: transparent;
+            &:active {
+                @include tabletPro {
+                    border: none;
+                    background-color: transparent;
+                }
+    
+                @include phonePro {
+                    border: none;
+                    background-color: transparent;
+                }
+
             }
 
-            @include phonePro {
-                border: none;
-                background-color: transparent;
-            }
-        }
-
-        button:focus {
-
-            @include tabletPro {
-                border: none;
-                background-color: transparent;
-            }
-
-            @include phonePro {
-                border: none;
-                background-color: transparent;
+            &:hover {
+                @include tabletPro {
+                    border: none;
+                    background-color: transparent;
+                }
+    
+                @include phonePro {
+                    border: none;
+                    background-color: transparent;
+                }
             }
         }
     }

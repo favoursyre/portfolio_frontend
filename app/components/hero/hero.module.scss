@@ -125,7 +125,7 @@
             }
 
             @include phonePro {
-                top: 3.5%;
+                top: 4%;
                 width: 100%;
                 text-align: center;
                 font-size: 12px;
@@ -159,7 +159,7 @@
                 font-size: 25px;
                 width: 100%;
                 text-align: center;
-                top: 3.5%;
+                top: 4%;
             }
 
             @include phoneMini {
@@ -487,7 +487,7 @@
                        // border: 1px solid green;
                         justify-content: flex-end;
                         font-size: 9px;
-                        top: 5px;
+                        //top: 5px;
                     }
 
                     @include phoneMini {
