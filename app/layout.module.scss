@@ -60,5 +60,18 @@
                 background-color: transparent;
             }
         }
+
+        button:focus {
+
+            @include tabletPro {
+                border: none;
+                background-color: transparent;
+            }
+
+            @include phonePro {
+                border: none;
+                background-color: transparent;
+            }
+        }
     }
 }
