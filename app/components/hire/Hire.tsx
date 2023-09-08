@@ -210,7 +210,7 @@ const Hire = () => {
               <span>Kindly send an email to <strong>favourndubuisi.official@gmail.com</strong> with the following the details; </span>
               <ul>
                 <li>Name</li>
-                <li>Company's name (if any)</li>
+                <li>Company&apos;s name (if any)</li>
                 <li>Budget</li>
                 <li>Job description</li>
               </ul>
