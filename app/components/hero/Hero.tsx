@@ -23,7 +23,7 @@ const Hero = () => {
   const downloadCV = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     e.preventDefault()
 
-    window.open("https://drive.google.com/uc?export=download&id=1rNyFv_0JkBBI5Xs7EmoPDO59fUjaOQJ3", "_blank")
+    window.open("https://drive.google.com/uc?export=download&id=1OmT1jXolTTC9_l0lY0olqj598PmQsnt8", "_blank")
   }
 
   return (
@@ -38,7 +38,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className={styles.brief}>
-                <span className={styles.brief1}>Software Engineer</span>
+                <span className={styles.brief1}>Full Stack Engineer</span>
                 <span className={`${styles.brief2}`}>
                     Favour Ndubuisi
                 </span>
@@ -64,7 +64,7 @@ const Hero = () => {
                         <CodeIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
-                        <span className={styles.span1}>5+ Years Work</span>
+                        <span className={styles.span1}>3+ Years Work</span>
                         <span className={styles.span2}>Experience</span>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ const Hero = () => {
                         <GradingIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
-                        <span className={styles.span1}>127+ Projects</span>
+                        <span className={styles.span1}>74+ Projects</span>
                         <span className={styles.span2}>Completed</span>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const Hero = () => {
                         <InsertEmoticonIcon className={styles.iconTag} />
                     </div>
                     <div className={styles.label}>
-                        <span className={styles.span1}>118+ Satisfied</span>
+                        <span className={styles.span1}>31+ Satisfied</span>
                         <span className={styles.span2}>Clients</span>
                     </div>
                 </div>

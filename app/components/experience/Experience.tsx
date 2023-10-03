@@ -98,26 +98,33 @@ const Experience = () => {
             <div className={styles.nupat} onClick={(e) => viewWork(e, 0)}>
               <div className={styles.circle}><AddIcon className={activeIndex !== 0 ? styles.icon : styles.inActiveIcon}/></div>
               <div className={styles.brief}>
-                <span className={styles.span1}>MetaMask</span>
-                <span className={styles.span2}>Software Engineer</span>
+                <span className={styles.span1}>Freelancer</span>
+                <span className={styles.span2}>Full Stack Engineer</span>
                 <div className={styles.span3}>
-                <span className={styles.country}>USA (Remote)</span>
+                <span className={styles.country}>Nigeria (Remote)</span>
                 <div className={styles.date}>
                   <CalendarMonthIcon className={styles.calendar} />
-                  <span>August 2022 - Current</span>
+                  <span>July 2020 - Current</span>
                 </div>
               </div>
               </div>
               <div className={`${styles.details} ${activeIndex !== 0 ? styles.inActiveDetails : ""}`}>
                 <ul>
-                  <li>Researched, designed, developed and tested blockchain technologies in line with product requirements.</li>
-                  <li>Collaborated with cross-functional teams to understand user requirements and translated them into technical specifications for blockchain integration with the Metamask wallet.</li>
-                  <li>Conducted security audits and performed code reviews to ensure the robustness and reliability of blockchain applications and wallet integrations.</li>
+                  <li>Research, design, develop, test and maintain web applications and blockchain solutions tailored to client requirements.</li>
+                  <li>Create responsive and intuitive user interfaces using frontend technologies like SCSS, React & NextTS</li>
+                  <li>Design and implement server-side logic, databases and APIs using backend technologies like ExpressTS & MongoDB</li>
+                  <li>Design and implement DApps using blockchain technologies like smart contracts, Ethereum, IPFS, Infura and Polygon</li>
+                  <li>Manage databases, ensuring data integrity, security, and optimal performance.</li>
+                  <li>Utilize version control systems (e.g., Git) for collaborative development and codebase management.</li>
+                  <li>Conduct unit tests, integration tests and debugging to ensure robustness and reliability of the applications using technologies like JMeter</li>
+                  <li>Implement security best practices, including encryption, authentication, auditing and authorization to protect applications and user data.</li>
+                  <li>Engage with clients to gather requirements, provide project updates and offer technical support and consultations.</li>
+                  {/* <li>Maintained understanding of current web technologies and programming practices through continuing education and participation in professional conferences and workshops</li> */}
                 </ul>
-                <span><strong>Technologies Used: </strong>Solidity, Typescript, NodeJS, NextJS, SCSS, ExpressJS, IPFS, Soft Skills</span>
+                <span><strong>Technologies Used: </strong>React JS, JMeter, Ethereum, Polygon, Infura, MongoDB, Solidity, Hardhat, Typescript, NodeJS, NextJS, SCSS, ExpressJS, IPFS</span>
               </div>
             </div>
-            <div className={styles.payoneer} onClick={(e) => viewWork(e, 1)}>
+            {/* <div className={styles.payoneer} onClick={(e) => viewWork(e, 1)}>
             <div className={styles.circle}><AddIcon className={activeIndex !== 1 ? styles.icon : styles.inActiveIcon}/></div>
             <div className={styles.brief}>
                 <span className={styles.span1}>Payoneer</span>
@@ -181,7 +188,7 @@ const Experience = () => {
                 </ul>
                 <span><strong>Technologies Used: </strong>Typescript, NodeJS, ReactJS, SCSS, ExpressJS, MongoDB, Soft Skills</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         </div>

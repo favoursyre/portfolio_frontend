@@ -7,19 +7,19 @@
 .main {
     //border: 1px solid blue;
     @include size(100%, 90%);
-    top: 265%;
+    top: 275%;
     @include flexBar($align: center, $justify: center, $flex_d: column, $gap: 0%);
     left: 0%;
     font-family: "Inter";
 
     @include tabletPro {
-        top: 130%;
+        top: 135%;
         height: 50%;
     }
 
     @include tablet {
         //font-size: 30px;
-        top: 155%;
+        top: 160%;
         height: 60%;
     }
 
@@ -558,7 +558,11 @@
                         span {
                             //border: 1px solid red;
                             position: relative;
-                            top: -3%;
+                            top: 0%;
+
+                            @include phonePro {
+                                line-height: 12px;
+                            }
                         }
                     }
 

@@ -125,7 +125,7 @@ const Hire = () => {
                         </div>
                         <span><strong>Let&apos;s Talk</strong></span>
                     </div>
-                    <div className={styles.brief}>+234-9090982848</div>
+                    <div className={styles.brief}>+234-9012468855</div>
                 </div>
                 <div className={styles.emailAddress}>
                     <div className={styles.head}>
