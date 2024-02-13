@@ -6,8 +6,7 @@
 3. [Technologies](#technologies)
 
 ## Overview
-This is the frontend for my portfolio website.
-The backend code for this website can be found at `https://github.com/favoursyre/portfolio_backend.git` 
+This is the fullstack code for my portfolio website.
 
 ## Languages
 * HTML

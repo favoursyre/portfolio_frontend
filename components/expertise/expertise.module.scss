@@ -1,0 +1,233 @@
+/* This contains the scss for the about component */
+
+//Libraries -->
+@import "../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid black;
+    @include size(100%, 100%);
+    top: 165%;
+    @include flexBar($align: center, $justify: center, $gap: 3%);
+    left: 0%;
+    font-family: "Inter";
+
+    /* Styles for the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: $text-color-4;  /* Color of the thumb */
+        border-radius: 5px;  /* Rounded corners of the thumb */
+    }
+    
+    /* Styles for the scrollbar thumb when hovering */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $text-color-4;  /* Color of the thumb on hover */
+    }
+
+    @include tabletPro {
+        top: 90%;
+        height: 40%;
+    }
+
+    @include tablet {
+        top: 105%;
+        height: 50%;
+    }
+
+    @include tabletMini {
+        top: 105%;
+        height: 50%;
+    }
+
+    @include phonePro {
+        top: 180%;
+        height: 40%;
+    }
+
+    @include phoneMini {
+        top: 195%;
+        height: 40%;
+    }
+
+    .container {
+        //border: 1px solid $text-color-3;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
+        @include size(85%, 90%);
+        //border-radius: 10px;
+        //background-color: $text-color-3;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.074), white);
+        //box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.2), 0px 6px 12px rgba(0, 0, 0, 0.2);
+
+        .span1 {
+            //border: 1px solid red;
+            @include text-layout($size: 13px, $l_height: 20px, $color: $primary-color);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            @include size(100%, 3%);
+
+            @include phonePro {
+                height: 5%;
+                font-size: 12px;
+            }
+
+            @include phoneMini {
+                font-size: 12px;
+            }
+        }
+
+        h3 {
+            //border: 1px solid red;
+            @include text-layout($size: 40px, $l_height: 45px, $color: $text-color-2, $weight: 600);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            @include size(100%, 10%);
+            margin-top: 0px;
+            font-family: "Aclonica";
+            margin-bottom: 20px;
+
+            @include tabletPro {
+                height: 11%;
+            }
+
+            @include tablet {
+                font-size: 30px;
+            }
+
+            @include tabletMini {
+                font-size: 30px;
+            }
+
+            @include phonePro {
+                justify-content: center;
+                margin-top: 5px;
+                font-size: 25px;
+            }
+
+            @include phoneMini {
+                margin-top: 0px;
+                font-size: 20px;
+                height: 13%;
+            }
+        }
+
+        .skills {
+            @include flexBar($position: relative, $align: flex-start, $justify: space-between, $flex_d: row);
+            column-gap: 2%;
+            row-gap: 4%;
+            flex-wrap: wrap;
+            flex-flow: wrap;
+            padding: 1% 1%;
+            //border: 1px solid red;
+            @include size(90%, 70%);
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .carousel {
+                //border: 1px solid red;
+                background-color: $tertiary-color;
+                @include flexBar($position: relative, $align: space-between, $justify: center, $flex_d: column);
+                @include size(9%, 30%);
+                border-radius: 10px;
+                transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+                padding: 0% 1%;
+
+                @include tabletPro {
+                    //@include size(10%, 30%);
+                }
+
+                @include tablet {
+                    //@include size(10%, 30%);
+                    width: 13%;
+                }
+
+                @include tabletMini {
+                    //@include size(10%, 30%);
+                    width: 14%;
+                }
+
+                @include phonePro {
+                    width: 18%;
+                }
+
+                @include phoneMini {
+                    width: 20%;
+                }
+
+                .illustrate {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column);
+                    @include size(100%, 75%);
+
+                    .image {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center);
+                        @include size(90%, 70%);
+
+                        img {
+                            position: relative;
+                            object-fit: contain;
+                            @include size(90%, 90%);
+                        }
+                    }
+
+                    .name {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: center);
+                        @include size(100%, 20%);
+                        @include text-layout($size: 12px, $l_height: 30px, $color: $text-color-2, $weight: 600);
+
+                        @include phonePro {
+                            font-size: 8px;
+                        }
+
+                        @include phoneMini {
+                            font-size: 6px;
+                        }
+                    }
+                }
+
+                .brief {
+                    //border: 1px solid red;
+                    @include flexBar($position: relative, $align: center, $justify: space-between);
+                    @include size(100%, 10%);
+
+                    .percentBar {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: flex-start);
+                        @include size(65%, 40%);
+                        background-color: $text-color-3;
+                        //left: 5%;
+                        overflow: hidden;
+                        border-radius: 100px;
+
+                        .bar {
+                            //border: 1px solid red;
+                            @include flexBar($position: relative, $align: center, $justify: flex-start);
+                            height: 100%;
+                            background-color: $primary-color;
+                        }
+                    }
+
+                    .percentValue {
+                        //border: 1px solid red;
+                        @include flexBar($position: relative, $align: center, $justify: flex-start);
+                        @include size(20%, 100%);
+                        @include text-layout($size: 9px, $l_height: 20px, $color: $text-color-2, $weight: 600);
+                        //left: -2%;
+
+                        @include phonePro {
+                            font-size: 7px;
+                            left: -7%;
+                        }
+
+                        @include phoneMini {
+                            font-size: 6px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.01);
+                    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}

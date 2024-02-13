@@ -1,0 +1,145 @@
+/* This contains the scss for the hire me component */
+
+//Libraries -->
+@import "../../styles/base.modules";
+
+//Commencing the code -->
+.main {
+    //border: 1px solid red;
+    @include size(100%, 50%);
+    top: 465%;
+    font-family: "Inter";
+    @include flexBar($align: flex-end, $justify: center, $gap: 3%);
+    left: 0%;
+
+    @include tabletPro {
+        top: 230%;
+        height: 30%;
+    }
+
+    @include tablet {
+        top: 265%;
+        height: 30%;
+    }
+
+    @include tabletMini {
+        top: 265%;
+        height: 32%;
+    }
+
+    @include phonePro {
+        top: 390%;
+        height: 35%;
+        //padding: 2% 0%;
+    }
+
+    @include phone {
+        top: 400%;
+        height: 45%;
+    }
+
+    @include phoneMini {
+        top: 460%;
+        height: 55%;
+    }
+
+    .container {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 0%);
+        @include size(90%, 100%);
+        background-color: $primary-color;
+
+        @include phonePro {
+            padding: 2% 0%;
+            height: 95%;
+        }
+
+        .span1 {
+            //border: 1px solid red;
+            @include text-layout($size: 13px, $l_height: 20px, $color: $tertiary-color);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            @include size(100%, 5%);
+
+            @include phonePro {
+                font-size: 12px;
+                height: 5%;
+            }
+        }
+
+        h3 {
+            //border: 1px solid red;
+            @include text-layout($size: 40px, $l_height: 45px, $color: $text-color-2, $weight: 600);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            @include size(100%, 15%);
+            margin-top: 5px;
+            font-family: "Aclonica";
+            margin-bottom: 10px;
+
+            @include tablet {
+                margin-top: 0px;
+                font-size: 30px;
+            }
+
+            @include phonePro {
+                font-size: 25px;
+                margin-top: 5px;
+                height: 10%;
+            }
+
+            @include phoneMini {
+                font-size: 20px;
+                margin-top: 5px;
+                height: 8%;
+            }
+        }
+
+        .span2 {
+            //border: 1px solid red;
+            @include flexBar($position: relative, $align: center, $justify: center, $flex_d: column, $gap: 10%);
+            @include size(70%, 40%);
+            @include text-layout($size: 14px, $l_height: 23px, $color: $text-color-2);
+
+            @include phonePro {
+                @include size(90%, 55%);
+                text-align: center;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            @include phoneMini {
+               font-size: 10px;
+               line-height: 20px;
+            }
+        }
+
+        button {
+            background-color: $tertiary-color;
+            border: none;
+            border-radius: 100px;
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+            @include size(15%, 15%);
+            @include text-layout($size: 14px, $l_height: 13px, $color: $primary-color, $weight: 600);
+            top: 2%;
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.2), 0px 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+            @include tabletMini {
+                width: 20%;
+            }
+
+            @include phonePro {
+                @include size(40%, 13%);
+                margin: 10px;
+            }
+
+            @include phoneMini {
+                @include size(50%, 10%);
+                font-size: 12px;
+            }
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+}

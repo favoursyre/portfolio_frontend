@@ -40,7 +40,7 @@
         background-color: $primary-color;  /* Color of the thumb on hover */
     }
 
-    .mainDiv {
+    .body {
         overflow-x: hidden !important;
         //position: absolute;
 
@@ -49,6 +49,7 @@
         }
 
         button {
+            outline: none;
 
             &:active {
                 @include tabletPro {

@@ -1,46 +1,28 @@
 ///Layout page
 
 ///Libraries -->
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 import styles from "./layout.module.scss"
-import { backend } from './utils/utils';
-import { Provider } from "react-redux";
-//import { Head, Html, Main, NextScript } from "next/document";
-import Head from 'next/head';
-import store from "./utils/redux/store"
+import { domainName } from '@/config/utils';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//import store from "@/config/redux/store"
 
 ///Commencing the code
 
 ///Declaring the metadata
 export const metadata = {
-  title: 'Favour Syre',
+  metadataBase: new URL(domainName), 
+  title: {
+    default: `Favour Syre`,
+    template: `%s | Favour Syre`
+  },
   icons: {
     icon: 'uchiha_.png',
   },
-  description: 'Portfolio website for freelancing and hiring software engineer',
-  keywords: "software engineeer, web, blockchain, cyber security, AI, ML"
-}
-
-///This fetches the contact information
-async function getContacts() {
-  try {
-    const response = await fetch(
-        `${backend}/contacts`,
-        {
-          next: {
-            revalidate: 60,
-          },
-        }
-      );
-    
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second
-    
-      const contacts = await response.json();
-      return contacts;
-} catch (error) {
-    console.log(`Contacts: ${error}`);
-}
+  description: `Favour Ndubuisi's portfolio website for freelancing and hiring for software engineering gigs`,
+  keywords: "software engineeer, web, blockchain, cyber security, AI, ML, freelancer"
 }
 
 export default async function RootLayout({
@@ -48,21 +30,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const contacts = await getContacts()
 
   return (
-    <html lang="en" className={styles.html} style={{scrollBehavior:'smooth'}}>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-      </Head>
-      <div className={styles.mainDiv}> 
-        <body className={styles.body}>
-          <Header />
-            {/* <ToastContainer /> */}
-            <main className='container'>{children}</main>
-            <Footer contact_={contacts} />
-        </body>
-        </div>
-      </html>
+    <html lang="en" className={styles.html} style={{ scrollBehavior: 'smooth' }}>
+      <body className={styles.body}>
+        <ToastContainer autoClose={5000} limit={5} newestOnTop={true} />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
   )
 }

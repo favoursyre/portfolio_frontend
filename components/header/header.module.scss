@@ -1,0 +1,367 @@
+/* This contains the scss for the header component */
+
+//Libraries -->
+@import "../../styles/base.modules";
+
+//Commencing the code -->
+.header {
+    //border: 1px solid red;
+    @include max-size;
+    @include size($height: 7%);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    @include flexBar($align: center, $justify: space-between);
+    padding: 1% 0%;
+    //background-color: $primary-color;
+
+    @include tabletPro {
+        //border: 1px solid black;
+        height: 5%;
+        //width: 100%;
+    }
+
+    @include tablet {
+        //border: 1px solid black;
+        height: 5%;
+        //width: 100%;
+    }
+
+    @include tabletMini {
+        //border: 1px solid black;
+        display: none;
+    }
+
+    @include phonePro {
+        //border: 1px solid black;
+        display: none;
+    }
+
+    @include phone {
+        //border: 1px solid black;
+        display: none;
+    }
+
+    .logo {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
+        @include size(10%, 100%);
+        left: 2%;
+
+        img {
+            //border: 1px solid black;
+            position: relative;
+            object-fit: contain;
+            @include size(100%, 100%);
+        }
+
+        span {
+            //border: 1px solid red;
+            @include text-layout($size: 18px, $l_height: 27px, $color: $primary-color, $weight: 600);
+        }
+    }
+
+    .category {
+        //border: 1px solid green;
+        @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 3%);
+        @include size(40%, 100%);
+        left: -5%;
+        font-family: "Poppins";
+
+        @include tabletPro {
+            left: -5%;
+            width: 55%;
+        }
+
+        @include tablet {
+            //border: 1px solid black;
+            width: 60%;
+            gap: 1%;
+            //width: 100%;
+        }
+
+        button {
+            border: none;
+            @include text-layout($size: 14px, $l_height: 27px, $color: $text-color-4, $weight: 600);
+            background-color: transparent;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            @include flexBar($position: relative, $align: center, $justify: center, $gap: 2%);
+
+            &:hover {
+                color: $primary-color;
+                //font-weight: 700;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.socials {
+    //border: 1px solid red;
+    @include flexBar($position: fixed, $align: center, $justify: center, $flex_d: row, $gap: 4%);
+    @include size(3%, 100%);
+    z-index: 10;
+    //top
+
+
+    @include tabletMini {
+        height: 50%;
+    }
+
+    @include phonePro {
+        height: 50%;
+    }
+
+    @include phone {
+        height: 70%;
+    }
+
+    @include phoneMini {
+        height: 70%;
+    }
+
+    .container {
+        //border: 1px solid black;
+        @include flexBar ($position: relative, $align: center, $justify: center, $gap: 5%, $flex_d: column);
+        @include size(100%, 40%);
+        //top: -50%;
+        
+        button {
+            border: none;
+            background-color: transparent;
+            transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+            color: $text-color-4;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .twitter:hover {
+            color: rgb(21, 137, 253);
+        }
+        
+        .whatsapp:hover {
+            color: rgb(21, 209, 21);
+        }
+        
+        .instagram:hover {
+            color: #e9497e;
+        }
+        
+        .facebook:hover {
+            color: rgb(30, 30, 255);
+        }
+
+        .linkedin:hover {
+            color: rgb(30, 30, 255);
+        }
+
+        .github:hover {
+            color: black;
+        }
+    }
+    //height: 100%;
+}
+
+%mobile_Header {
+    //border: 1px solid red;
+    display: flex;
+    @include max-size;
+    @include size($height: 7%);
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+    @include flexBar($align: center, $justify: space-between);
+    padding: 1% 0%;
+
+    .logo {
+        //border: 1px solid red;
+        @include flexBar($position: relative, $align: center, $justify: flex-start, $gap: 0%);
+        @include size(20%, 80%);
+        left: 5%;
+
+        img {
+            //border: 1px solid black;
+            position: relative;
+            object-fit: contain;
+            @include size(100%, 100%);
+        }
+
+        span {
+            //border: 1px solid red;
+            @include text-layout($size: 18px, $l_height: 27px, $color: $primary-color, $weight: 600);
+        }
+    }
+
+    button {
+        @include flexBar($position: relative, $align: center, $justify: center, $gap: 0%);
+        background-color: $tertiary-color;
+        border: none;
+        left: -5%;
+        color: $text-color-4;
+
+        .icon {
+            font-size: 2rem;
+        }
+    }
+}
+
+.mobileHeader {
+    @extend %mobile_Header;
+    //border: 1px solid red;
+
+    @include desktop {
+        display: none;
+        //border: 1px solid red;
+    }
+
+    @include tabletPro {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include tabletMini {
+        display: flex;
+    }
+
+    @include phonePro {
+        //border: 1px solid green;
+        //height: 65px;
+    }
+
+    @include phone {
+        //height: 55px;
+    }
+
+    @include phoneMini {
+        //height: 45px;
+    }
+}
+
+%menuBar {
+    //border: 1px solid red;
+    @include size ($width: 40%, $height: 26.5%);
+    @include flexBar ($align: center, $justify: flex-start, $gap: 0%, $flex_d: column, $flex: none);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: $tertiary-color;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    font-family: "Poppins";
+    border-radius: 10px 0px 0px 0px;
+    //transform: translateX(-0%);
+
+    button {
+        border: none;
+        border-bottom: 1px solid $primary-color;
+        @include size ($width: 90%, $height: 6%);
+        @include flexBar ($position: relative, $align: center, $justify: center, $gap: 1%, $flex: none);
+        @include text-layout($size: 20px, $l_height: 35px, $color: $text-color-4, $weight: 600);
+        background-color: $tertiary-color;
+        //z-index: 100;
+
+        @include phonePro {
+            font-size: 18px;
+         }
+
+         @include phone {
+            font-size: 16px;
+         }
+
+         @include phoneMini {
+            font-size: 14px;
+        }
+    }
+
+   
+
+    @include desktop {
+        display: none;
+        //border: 1px solid red;
+    }
+
+    @include tabletPro {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include tabletMini {
+        display: flex;
+    }
+
+    @include phonePro {
+       width: 70%;
+    }
+
+    @include phone {
+        width: 70%;
+     }
+}
+
+.activeMenuModal {
+    //border: 1px solid blue;
+    @include size ($width: 100%, $height: 343%);
+    @include flexBar ($align: flex-start, $justify: flex-end, $gap: 1%, $flex_d: row, $flex: none);
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0%;
+    top: 9%;
+    z-index: 100;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    @include desktop {
+        display: none;
+        //border: 1px solid red;
+    }
+
+    @include tabletPro {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include tabletMini {
+        display: flex;
+    }
+
+    @include phonePro {
+        top: 8%;
+        height: 485%;
+    }
+
+    @include phonePro {
+        height: 504%;
+    }
+
+    @include phoneMini {
+        height: 590%;
+    }
+
+    .activeMenu {
+        @extend %menuBar;
+        transform: translateX(0%);
+
+        @include phonePro {
+            
+        }
+    }
+    
+    .inActiveMenu {
+        @extend %menuBar;
+        //display: none;
+        transform: translateX(100%);
+    }
+}
+
+.inActiveMenuModal {
+    display: none;
+}
+
+
+
